@@ -9,6 +9,11 @@ book:
     - index.qmd
     - intro.qmd
     - joy.ipynb
+    - part: Homework
+      chapters:
+        - hw03.ipynb
+        - hw04.ipynb
+        - hw05.ipynb
     - summary.qmd
     - references.qmd
 
@@ -17,8 +22,8 @@ bibliography: references.bib
 format:
   html:
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
+ # pdf:
+  #  documentclass: scrreprt
 
 
 
