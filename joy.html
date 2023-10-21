@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>The Transmutation Spellbook - 2&nbsp; Joy of Programming</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./summary.html" rel="next">
+<link href="./intro.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./joy.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Joy of Programming</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">The Transmutation Spellbook</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./joy.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Joy of Programming</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#joy" id="toc-joy" class="nav-link active" data-scroll-target="#joy"><span class="header-section-number">2.1</span> Joy</a></li>
+  <li><a href="#interactive-widgets" id="toc-interactive-widgets" class="nav-link" data-scroll-target="#interactive-widgets"><span class="header-section-number">2.2</span> Interactive Widgets</a></li>
+  <li><a href="#session-4-06-10-2023" id="toc-session-4-06-10-2023" class="nav-link" data-scroll-target="#session-4-06-10-2023"><span class="header-section-number">3</span> Session 4, 06-10-2023</a></li>
+  <li><a href="#session-5---13-10-2023" id="toc-session-5---13-10-2023" class="nav-link" data-scroll-target="#session-5---13-10-2023"><span class="header-section-number">4</span> Session 5 - 13-10-2023</a>
+  <ul class="collapse">
+  <li><a href="#concentric-circles" id="toc-concentric-circles" class="nav-link" data-scroll-target="#concentric-circles"><span class="header-section-number">4.1</span> Concentric Circles</a></li>
+  <li><a href="#a-row-of-shapes" id="toc-a-row-of-shapes" class="nav-link" data-scroll-target="#a-row-of-shapes"><span class="header-section-number">4.2</span> A Row of Shapes</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Joy of Programming</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.735786Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.735488Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.739907Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.738844Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.735761Z&quot;}" data-execution_count="126">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> joy <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> interact, IntSlider, FloatSlider</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.755403Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.754854Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.759133Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.758250Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.755375Z&quot;}" data-execution_count="127">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># increase the recursion limit to avoid the "maximum recursion depth" error</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>sys.setrecursionlimit(<span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="joy" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="joy"><span class="header-section-number">2.1</span> Joy</h2>
+<p>Joy supports working with Jupyter notebooks. Is displays a shape automatically, without having to call the <code>show</code> function.</p>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.770290Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.770023Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.775835Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.774975Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.770264Z&quot;}" data-execution_count="128">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>circle()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="128">
+<p><img src="joy_files/figure-html/cell-5-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.778031Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.777533Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.791668Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.790883Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.778003Z&quot;}" data-execution_count="129">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>circle(r<span class="op">=</span><span class="dv">25</span>, x<span class="op">=</span><span class="dv">100</span>) <span class="op">|</span> repeat(<span class="dv">200</span>, rotate(<span class="dv">10</span>)<span class="op">|</span>scale(<span class="fl">0.985</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="129">
+<p><img src="joy_files/figure-html/cell-6-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="interactive-widgets" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="interactive-widgets"><span class="header-section-number">2.2</span> Interactive Widgets</h2>
+<p>Jupyter supports interactive widgets that allow adding a slider to change values and see the updated image in real-time.</p>
+<p>Let’s start with a simple example of star and see if we can make it interactive.</p>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.793126Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.792667Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.797892Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.797079Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.793095Z&quot;}" data-execution_count="130">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> star(n):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    angle <span class="op">=</span> <span class="dv">180</span><span class="op">/</span>n</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> line() <span class="op">|</span> repeat(n, rotate(angle))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.799444Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.798965Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.806207Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.805561Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.799411Z&quot;}" data-execution_count="131">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>star(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="131">
+<p><img src="joy_files/figure-html/cell-8-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<p>Let’s make it interactive using the <code>interactive</code> function. Notice that we have specified the value of <code>n</code> as an <code>IntSlider</code>.</p>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.808090Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.807858Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.824769Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.823892Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.808067Z&quot;}" data-execution_count="132">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>interact(star, n<span class="op">=</span>IntSlider(value<span class="op">=</span><span class="dv">5</span>, <span class="bu">min</span><span class="op">=</span><span class="dv">1</span>, <span class="bu">max</span><span class="op">=</span><span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"4178bbc28e0b4ee4b269ff19d4fa2b2c","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="132">
+<pre><code>&lt;function __main__.star(n)&gt;</code></pre>
+</div>
+</div>
+<p>Interactive widgets makes it easy to discover the correct value of scale or angle when making complex shapes.</p>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.825768Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.825547Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.829730Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.828913Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.825746Z&quot;}" data-execution_count="133">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> spiral(scale_factor):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> circle(r<span class="op">=</span><span class="dv">25</span>, x<span class="op">=</span><span class="dv">100</span>) <span class="op">|</span> repeat(<span class="dv">200</span>, rotate(<span class="dv">10</span>)<span class="op">|</span>scale(scale_factor))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.830922Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.830510Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.844358Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.843626Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.830896Z&quot;}" data-execution_count="134">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>spiral(<span class="fl">0.95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="134">
+<p><img src="joy_files/figure-html/cell-11-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.845684Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.845442Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.869407Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.868471Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.845659Z&quot;}" data-execution_count="135">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>interact(spiral, </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>         scale_factor<span class="op">=</span>FloatSlider(value<span class="op">=</span><span class="fl">0.9</span>, <span class="bu">min</span><span class="op">=</span><span class="fl">0.8</span>, <span class="bu">max</span><span class="op">=</span><span class="fl">1.0</span>, step<span class="op">=</span><span class="fl">0.001</span>, readout_format<span class="op">=</span><span class="st">"0.3f"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"8e32c35e69674f1c9eb3335f821bae0d","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="135">
+<pre><code>&lt;function __main__.spiral(scale_factor)&gt;</code></pre>
+</div>
+</div>
+<p>Try doing the interactive widget for drawing a magic squares.</p>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.870498Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.870258Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.883359Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.882743Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.870474Z&quot;}" data-execution_count="136">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>rectangle(w<span class="op">=</span><span class="dv">250</span>, h<span class="op">=</span><span class="dv">250</span>) <span class="op">|</span> repeat(<span class="dv">200</span>, rotate(<span class="dv">10</span>)<span class="op">|</span>scale(<span class="fl">0.8</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="136">
+<p><img src="joy_files/figure-html/cell-13-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<p>Can you convert that into an interactive widget?</p>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.884652Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.884379Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.888817Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.887953Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.884626Z&quot;}" data-execution_count="137">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> magic_squares(scale_factor):</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> rectangle(w<span class="op">=</span><span class="dv">250</span>, h<span class="op">=</span><span class="dv">250</span>)<span class="op">|</span>repeat(<span class="dv">200</span>, rotate(<span class="dv">10</span>)<span class="op">|</span>scale(scale_factor))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.889965Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.889727Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.913965Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.913042Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.889941Z&quot;}" data-execution_count="138">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>interact(magic_squares,</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>         scale_factor <span class="op">=</span> FloatSlider(value<span class="op">=</span><span class="fl">0.9</span>, <span class="bu">min</span><span class="op">=</span><span class="fl">0.1</span>, <span class="bu">max</span><span class="op">=</span><span class="fl">1.0</span>, step<span class="op">=</span><span class="fl">0.01</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"96f0a286f49343029e09e40cf6ad6654","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="138">
+<pre><code>&lt;function __main__.magic_squares(scale_factor)&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.915592Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.915012Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.920395Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.919605Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.915554Z&quot;}" data-execution_count="139">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> magic_ellipse(scale_factor, n, s):</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ellipse(w<span class="op">=</span><span class="dv">150</span>, h<span class="op">=</span><span class="dv">300</span>)<span class="op">|</span>scale(s)<span class="op">|</span>repeat(n, rotate(<span class="dv">10</span>)<span class="op">|</span>scale(scale_factor))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.925365Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.924770Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.952446Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.951632Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.925326Z&quot;}" data-execution_count="140">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>interact(magic_ellipse, </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>         scale_factor<span class="op">=</span>FloatSlider(value<span class="op">=</span><span class="fl">0.9</span>, <span class="bu">min</span><span class="op">=</span><span class="fl">0.6</span>, <span class="bu">max</span><span class="op">=</span><span class="fl">1.0</span>, step<span class="op">=</span><span class="fl">0.01</span>),</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>        n<span class="op">=</span>IntSlider(value<span class="op">=</span><span class="dv">100</span>, <span class="bu">min</span><span class="op">=</span><span class="dv">1</span>, <span class="bu">max</span><span class="op">=</span><span class="dv">150</span>),</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>        s<span class="op">=</span>FloatSlider(value<span class="op">=</span><span class="fl">0.20</span>, <span class="bu">min</span><span class="op">=</span><span class="fl">0.01</span>, <span class="bu">max</span><span class="op">=</span><span class="fl">1.00</span>, step<span class="op">=</span><span class="fl">0.01</span>),)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id":"187925eaf91c46d5a03010e314ef847d","version_major":2,"version_minor":0,"quarto_mimetype":"application/vnd.jupyter.widget-view+json"}
+</script>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="140">
+<pre><code>&lt;function __main__.magic_ellipse(scale_factor, n, s)&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.953736Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.953489Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.957764Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.956910Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.953709Z&quot;}" data-execution_count="141">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Carol"</span>, <span class="st">"Dave"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.958910Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.958610Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.964074Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.963287Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.958877Z&quot;}" data-execution_count="142">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> names:</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Hello"</span>, name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello Alice
+Hello Bob
+Hello Carol
+Hello Dave</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.965637Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.965188Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.969731Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.968878Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.965604Z&quot;}" data-execution_count="143">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>names.append(<span class="st">"Elly"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.971058Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.970771Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.977100Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.976314Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.971029Z&quot;}" data-execution_count="144">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>names</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="144">
+<pre><code>['Alice', 'Bob', 'Carol', 'Dave', 'Elly']</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.978472Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.978054Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.982270Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.981513Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.978441Z&quot;}" data-execution_count="145">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.983714Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.983308Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.988376Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.987653Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.983684Z&quot;}" data-execution_count="146">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> []</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> numbers:</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    result.append(n<span class="op">*</span>n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.989486Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.989213Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:16.994524Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:16.993933Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.989461Z&quot;}" data-execution_count="147">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="147">
+<pre><code>[1, 4, 9, 16, 25]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:16.995703Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:16.995470Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.001215Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.000611Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:16.995677Z&quot;}" data-execution_count="148">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>[n<span class="op">*</span>n <span class="cf">for</span> n <span class="kw">in</span> numbers]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="148">
+<pre><code>[1, 4, 9, 16, 25]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.002473Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.002245Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.006663Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.006050Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.002449Z&quot;}" data-execution_count="149">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>circles <span class="op">=</span> [circle(r<span class="op">=</span>r) <span class="cf">for</span> r <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">100</span>, <span class="dv">10</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.007548Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.007322Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.013579Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.012539Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.007523Z&quot;}" data-execution_count="150">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>combine(circles)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="150">
+<p><img src="joy_files/figure-html/cell-27-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.014919Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.014492Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.019665Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.018903Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.014893Z&quot;}" data-execution_count="151">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>random(<span class="dv">42</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="151">
+<pre><code>29.29376088736861</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.020887Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.020655Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.025782Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.025027Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.020862Z&quot;}" data-execution_count="152">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> random_circles(r, n):</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    shapes <span class="op">=</span> [circle(r<span class="op">=</span>random(r)) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n)]</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> combine(shapes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.027064Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.026832Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.032831Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.032194Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.027039Z&quot;}" data-scrolled="true" data-execution_count="153">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>random_circles(<span class="dv">150</span>, <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="153">
+<p><img src="joy_files/figure-html/cell-30-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="session-4-06-10-2023" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Session 4, 06-10-2023</h1>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.034230Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.033995Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.037297Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.036688Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.034205Z&quot;}" data-execution_count="154">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> wizard <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.038440Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.038216Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.043428Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.042728Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.038415Z&quot;}" data-execution_count="155">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>circle()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="155">
+<p><img src="joy_files/figure-html/cell-32-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.044606Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.044351Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.050397Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.049583Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.044550Z&quot;}" data-execution_count="156">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>random_squares()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="156">
+<p><img src="joy_files/figure-html/cell-33-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.051743Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.051466Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.077563Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.076848Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.051714Z&quot;}" data-execution_count="157">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>grid_3(random_squares)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="157">
+<p><img src="joy_files/figure-html/cell-34-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.078589Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.078355Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.083206Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.082341Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.078563Z&quot;}" data-execution_count="158">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decorate(shape):</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>    shape<span class="op">=</span>shape<span class="op">|</span>scale(<span class="dv">250</span><span class="op">/</span><span class="dv">300</span>)</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> rectangle(w<span class="op">=</span><span class="dv">280</span>, h<span class="op">=</span><span class="dv">280</span>, stroke_width<span class="op">=</span><span class="dv">5</span>)<span class="op">+</span>shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.084759Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.084412Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.090164Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.089531Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.084729Z&quot;}" data-execution_count="159">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>decorate(circle(r<span class="op">=</span><span class="dv">150</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="159">
+<p><img src="joy_files/figure-html/cell-36-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.091532Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.091290Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.096272Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.095631Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.091508Z&quot;}" data-execution_count="160">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gallery(s1, s2, s3, s4):</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> grid(decorate(s1), decorate(s2), decorate(s3), decorate(s4))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.097617Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.097307Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.101720Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.101025Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.097586Z&quot;}" data-execution_count="161">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ellipse_star(n):</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ellipse(w<span class="op">=</span><span class="dv">250</span>, h<span class="op">=</span><span class="dv">120</span>)<span class="op">|</span>repeat(n, rotate(<span class="dv">180</span><span class="op">/</span>n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.102985Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.102760Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.108216Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.107581Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.102962Z&quot;}" data-execution_count="162">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> random_ellipse_star():</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>    n<span class="op">=</span> <span class="bu">int</span>(random(<span class="dv">3</span>, <span class="dv">10</span>))</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ellipse_star(n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.114611Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.114356Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.122161Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.121307Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.114588Z&quot;}" data-execution_count="163">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>gallery(random_circles(), random_squares(), random_ellipse_star(), grid_1(random_squares))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="163">
+<p><img src="joy_files/figure-html/cell-40-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.123577Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.123116Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.129534Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.128761Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.123550Z&quot;}" data-execution_count="164">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(random(<span class="dv">1</span>, <span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="164">
+<pre><code>7</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.131119Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.130593Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.137764Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.137024Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.131081Z&quot;}" data-execution_count="165">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>grid_2(circle)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="165">
+<p><img src="joy_files/figure-html/cell-42-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.138938Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.138689Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.144332Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.143692Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.138913Z&quot;}" data-execution_count="166">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>circle?</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">Signature:</span> circle<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> r<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">100</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-red-fg">Docstring:</span>
+Creates a circle with center at (x, y) and radius of r.
+Examples:
+Draw a circle.
+    c = circle()
+    show(c)
+Draw a circle with radius 50.
+    c = circle(r=50)
+    show(c)
+Draw a circle with center at (10, 20) and a radius of 50.
+    c = circle(x=10, y=20, r=50)
+    show(c)
+<span class="ansi-red-fg">File:</span>      ~/joy.py
+<span class="ansi-red-fg">Type:</span>      function</pre>
+</div>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.145567Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.145336Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.150558Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.149922Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.145543Z&quot;}" data-execution_count="167">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>ellipse_star?</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">Signature:</span> ellipse_star<span class="ansi-blue-fg">(</span>n<span class="ansi-blue-fg">)</span>
+<span class="ansi-red-fg">Docstring:</span> &lt;no docstring&gt;
+<span class="ansi-red-fg">File:</span>      /tmp/ipykernel_1151176/2975163437.py
+<span class="ansi-red-fg">Type:</span>      function</pre>
+</div>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.151919Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.151622Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.157529Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.156512Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.151888Z&quot;}" data-execution_count="168">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>square?</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">Signature:</span> square<span class="ansi-blue-fg">(</span>w<span class="ansi-blue-fg">)</span>
+<span class="ansi-red-fg">Docstring:</span>
+Creates a rectangle with a given width, and height equal to the given width.
+Example:
+square(100)
+Gives a rectangle with width=100, and height equal to width that is, equal to 100.
+<span class="ansi-red-fg">File:</span>      ~/wizard.py
+<span class="ansi-red-fg">Type:</span>      function</pre>
+</div>
+</div>
+</div>
+</section>
+<section id="session-5---13-10-2023" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Session 5 - 13-10-2023</h1>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.158987Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.158673Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.162813Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.162066Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.158957Z&quot;}" data-execution_count="169">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>numbers <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.164229Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.163994Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.167873Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.166750Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.164206Z&quot;}" data-execution_count="170">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>numbers.append(<span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.169003Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.168775Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.174112Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.173262Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.168980Z&quot;}" data-execution_count="171">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="171">
+<pre><code>[1, 2, 3, 4, 5, 6]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.175293Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.175046Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.179685Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.178896Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.175269Z&quot;}" data-execution_count="172">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> squares(numbers):</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> n <span class="kw">in</span> numbers:</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>        result.append(n<span class="op">*</span>n)</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.180995Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.180750Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.186340Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.185601Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.180970Z&quot;}" data-execution_count="173">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>squares([<span class="dv">19</span>, <span class="dv">8</span>, <span class="dv">16</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="173">
+<pre><code>[361, 64, 256]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.187611Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.187366Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.191679Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.190913Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.187586Z&quot;}" data-execution_count="174">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> new_squares(numbers):</span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [n<span class="op">*</span>n <span class="cf">for</span> n <span class="kw">in</span> numbers]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.192951Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.192709Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.198457Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.197708Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.192926Z&quot;}" data-execution_count="175">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a>new_squares([<span class="dv">65</span>, <span class="dv">20</span>, <span class="dv">34</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="175">
+<pre><code>[4225, 400, 1156]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.199608Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.199379Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.204382Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.203635Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.199584Z&quot;}" data-execution_count="176">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(new_squares(<span class="bu">range</span>(<span class="dv">5</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="176">
+<pre><code>30</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.205965Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.205657Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.302321Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.301619Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.205934Z&quot;}" data-execution_count="177">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(new_squares(<span class="bu">range</span>(<span class="dv">1000000</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="177">
+<pre><code>333332833333500000</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.304344Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.304124Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.310408Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.309619Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.304321Z&quot;}" data-execution_count="178">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>[n<span class="op">*</span>n <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>) <span class="cf">if</span> n<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="178">
+<pre><code>[0, 4, 16, 36, 64]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.311663Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.311441Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.416808Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.416126Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.311640Z&quot;}" data-execution_count="179">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>([n<span class="op">*</span>n <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1000000</span>) <span class="cf">if</span> n<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">0</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="179">
+<pre><code>166666166667000000</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.419476Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.418667Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.425321Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.424739Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.419446Z&quot;}" data-execution_count="180">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>[n <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">100</span>) <span class="cf">if</span> n<span class="op">%</span><span class="dv">5</span><span class="op">==</span><span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="180">
+<pre><code>[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.426161Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.425949Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.431866Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.431120Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.426139Z&quot;}" data-execution_count="181">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">100</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="181">
+<pre><code>[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.432976Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.432743Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.436602Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.435678Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.432954Z&quot;}" data-execution_count="182">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.437589Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.437350Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.442032Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.441092Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.437565Z&quot;}" data-execution_count="183">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>step <span class="op">=</span> <span class="fl">4.5</span></span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>n<span class="op">=</span>math.ceil(<span class="dv">100</span><span class="op">/</span>step)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.443662Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.443154Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.448629Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.447482Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.443630Z&quot;}" data-execution_count="184">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="184">
+<pre><code>23</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.449690Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.449449Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.456007Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.455235Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.449665Z&quot;}" data-execution_count="185">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>[i<span class="op">*</span>step <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="185">
+<pre><code>[0.0,
+ 4.5,
+ 9.0,
+ 13.5,
+ 18.0,
+ 22.5,
+ 27.0,
+ 31.5,
+ 36.0,
+ 40.5,
+ 45.0,
+ 49.5,
+ 54.0,
+ 58.5,
+ 63.0,
+ 67.5,
+ 72.0,
+ 76.5,
+ 81.0,
+ 85.5,
+ 90.0,
+ 94.5,
+ 99.0]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.457249Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.457010Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.462700Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.462067Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.457224Z&quot;}" data-execution_count="186">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>math.ceil(<span class="fl">22.22</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="186">
+<pre><code>23</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.463993Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.463760Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.468597Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.467979Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.463968Z&quot;}" data-execution_count="187">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a>math.floor(<span class="fl">22.22</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="187">
+<pre><code>22</code></pre>
+</div>
+</div>
+<section id="concentric-circles" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="concentric-circles"><span class="header-section-number">4.1</span> Concentric Circles</h2>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.469678Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.469447Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.473614Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.472820Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.469653Z&quot;}" data-execution_count="188">
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a>radius <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a>n<span class="op">=</span><span class="dv">4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.475252Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.474879Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.481786Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.481029Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.475212Z&quot;}" data-execution_count="189">
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>circle(r<span class="op">=</span><span class="dv">100</span>)<span class="op">+</span>circle(r<span class="op">=</span><span class="dv">90</span>)<span class="op">+</span>circle(r<span class="op">=</span><span class="dv">80</span>)<span class="op">+</span>circle(r<span class="op">=</span><span class="dv">70</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="189">
+<p><img src="joy_files/figure-html/cell-66-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.482748Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.482518Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.488903Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.488060Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.482724Z&quot;}" data-execution_count="190">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>circle(r<span class="op">=</span><span class="dv">100</span>)<span class="op">+</span>circle(r<span class="op">=</span><span class="dv">75</span>)<span class="op">+</span>circle(r<span class="op">=</span><span class="dv">50</span>)<span class="op">+</span>circle(r<span class="op">=</span><span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="190">
+<p><img src="joy_files/figure-html/cell-67-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.490031Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.489758Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.496164Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.495435Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.490006Z&quot;}" data-execution_count="191">
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a>circle(r<span class="op">=</span><span class="dv">100</span>)<span class="op">+</span>circle(r<span class="op">=</span><span class="dv">80</span>)<span class="op">+</span>circle(r<span class="op">=</span><span class="dv">60</span>)<span class="op">+</span>circle(r<span class="op">=</span><span class="dv">40</span>)<span class="op">+</span>circle(r<span class="op">=</span><span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="191">
+<p><img src="joy_files/figure-html/cell-68-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.497508Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.497262Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.501011Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.500262Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.497483Z&quot;}" data-execution_count="192">
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>radius <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>n<span class="op">=</span><span class="dv">4</span></span>
+<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>delta <span class="op">=</span> radius<span class="op">/</span>n</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.502099Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.501870Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.506490Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.505890Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.502075Z&quot;}" data-execution_count="193">
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>delta</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="193">
+<pre><code>25.0</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.507498Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.507281Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.513562Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.512969Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.507474Z&quot;}" data-execution_count="194">
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a>[i<span class="op">*</span>delta <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="194">
+<pre><code>[25.0, 50.0, 75.0, 100.0]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.514720Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.514492Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.518461Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.517581Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.514696Z&quot;}" data-execution_count="195">
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>circles <span class="op">=</span> [circle(r <span class="op">=</span> i<span class="op">*</span>delta) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.520060Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.519759Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.525345Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.524503Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.520029Z&quot;}" data-execution_count="196">
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>circles</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="196">
+<pre><code>[&lt;circle {'cx': 0, 'cy': 0, 'r': 25.0}&gt;,
+ &lt;circle {'cx': 0, 'cy': 0, 'r': 50.0}&gt;,
+ &lt;circle {'cx': 0, 'cy': 0, 'r': 75.0}&gt;,
+ &lt;circle {'cx': 0, 'cy': 0, 'r': 100.0}&gt;]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.532535Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.532262Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.538280Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.537461Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.532508Z&quot;}" data-execution_count="197">
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a>circles[<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="197">
+<p><img src="joy_files/figure-html/cell-74-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.539716Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.539418Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.545091Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.544293Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.539685Z&quot;}" data-execution_count="198">
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a>combine(circles)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="198">
+<p><img src="joy_files/figure-html/cell-75-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.546474Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.546226Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.551222Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.550408Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.546449Z&quot;}" data-execution_count="199">
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> concentric_circles(radius, n):</span>
+<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a>    delta <span class="op">=</span> radius<span class="op">/</span>n</span>
+<span id="cb100-3"><a href="#cb100-3" aria-hidden="true" tabindex="-1"></a>    circles <span class="op">=</span> [circle(r<span class="op">=</span>i<span class="op">*</span>delta) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>)]</span>
+<span id="cb100-4"><a href="#cb100-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> combine(circles)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.552732Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.552239Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.558335Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.557666Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.552700Z&quot;}" data-execution_count="200">
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a>concentric_circles(<span class="dv">100</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="200">
+<p><img src="joy_files/figure-html/cell-77-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.559281Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.559047Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.564213Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.563607Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.559257Z&quot;}" data-execution_count="201">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>concentric_circles(<span class="dv">10</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="201">
+<p><img src="joy_files/figure-html/cell-78-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.565165Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.564934Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.571439Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.570600Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.565140Z&quot;}" data-execution_count="202">
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>concentric_circles(<span class="dv">100</span>, <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="202">
+<p><img src="joy_files/figure-html/cell-79-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="a-row-of-shapes" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="a-row-of-shapes"><span class="header-section-number">4.2</span> A Row of Shapes</h2>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.572988Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.572676Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.576937Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.576118Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.572956Z&quot;}" data-execution_count="203">
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a>s1<span class="op">=</span>circle()</span>
+<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a>s2<span class="op">=</span>rectangle()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.578064Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.577845Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.582554Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.582005Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.578041Z&quot;}" data-execution_count="204">
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a>s1<span class="op">+</span>s2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="204">
+<p><img src="joy_files/figure-html/cell-81-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.583699Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.583480Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.589176Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.588615Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.583677Z&quot;}" data-execution_count="205">
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>s1<span class="op">|</span>scale(<span class="fl">0.5</span>)<span class="op">|</span>translate(x<span class="op">=-</span><span class="dv">100</span>)</span>
+<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-3"><a href="#cb106-3" aria-hidden="true" tabindex="-1"></a>b<span class="op">=</span>s2<span class="op">|</span>scale(<span class="fl">0.5</span>)<span class="op">|</span>translate(x<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb106-4"><a href="#cb106-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-5"><a href="#cb106-5" aria-hidden="true" tabindex="-1"></a>a<span class="op">+</span>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="205">
+<p><img src="joy_files/figure-html/cell-82-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.590276Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.590053Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.594475Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.593589Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.590254Z&quot;}" data-execution_count="206">
+<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a>s1<span class="op">=</span>concentric_circles(<span class="dv">150</span>, <span class="dv">1</span>)</span>
+<span id="cb107-2"><a href="#cb107-2" aria-hidden="true" tabindex="-1"></a>s2<span class="op">=</span>concentric_circles(<span class="dv">150</span>, <span class="dv">2</span>)</span>
+<span id="cb107-3"><a href="#cb107-3" aria-hidden="true" tabindex="-1"></a>s3<span class="op">=</span>concentric_circles(<span class="dv">150</span>, <span class="dv">3</span>)</span>
+<span id="cb107-4"><a href="#cb107-4" aria-hidden="true" tabindex="-1"></a>s4<span class="op">=</span>concentric_circles(<span class="dv">150</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.595625Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.595388Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.602375Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.601574Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.595601Z&quot;}" data-execution_count="207">
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>s1<span class="op">|</span>scale(<span class="dv">1</span><span class="op">/</span><span class="dv">3</span>)<span class="op">|</span>translate(x<span class="op">=-</span><span class="dv">100</span>)</span>
+<span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a>b<span class="op">=</span>s2<span class="op">|</span>scale(<span class="dv">1</span><span class="op">/</span><span class="dv">3</span>)</span>
+<span id="cb108-3"><a href="#cb108-3" aria-hidden="true" tabindex="-1"></a>c<span class="op">=</span>s3<span class="op">|</span>scale(<span class="dv">1</span><span class="op">/</span><span class="dv">3</span>)<span class="op">|</span>translate(x<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb108-4"><a href="#cb108-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb108-5"><a href="#cb108-5" aria-hidden="true" tabindex="-1"></a>a<span class="op">+</span>b<span class="op">+</span>c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="207">
+<p><img src="joy_files/figure-html/cell-84-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.603503Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.603200Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.611538Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.610546Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.603471Z&quot;}" data-execution_count="208">
+<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb109-1"><a href="#cb109-1" aria-hidden="true" tabindex="-1"></a>dx <span class="op">=</span> <span class="dv">300</span><span class="op">/</span><span class="dv">4</span></span>
+<span id="cb109-2"><a href="#cb109-2" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>s1<span class="op">|</span>scale(<span class="dv">1</span><span class="op">/</span><span class="dv">4</span>)<span class="op">|</span>translate(x<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb109-3"><a href="#cb109-3" aria-hidden="true" tabindex="-1"></a>b<span class="op">=</span>s2<span class="op">|</span>scale(<span class="dv">1</span><span class="op">/</span><span class="dv">4</span>)<span class="op">|</span>translate(x<span class="op">=</span>dx)</span>
+<span id="cb109-4"><a href="#cb109-4" aria-hidden="true" tabindex="-1"></a>c<span class="op">=</span>s3<span class="op">|</span>scale(<span class="dv">1</span><span class="op">/</span><span class="dv">4</span>)<span class="op">|</span>translate(x<span class="op">=</span><span class="dv">2</span><span class="op">*</span>dx)</span>
+<span id="cb109-5"><a href="#cb109-5" aria-hidden="true" tabindex="-1"></a>d<span class="op">=</span>s4<span class="op">|</span>scale(<span class="dv">1</span><span class="op">/</span><span class="dv">4</span>)<span class="op">|</span>translate(x<span class="op">=</span><span class="dv">3</span><span class="op">*</span>dx)</span>
+<span id="cb109-6"><a href="#cb109-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb109-7"><a href="#cb109-7" aria-hidden="true" tabindex="-1"></a>shape <span class="op">=</span> a<span class="op">+</span>b<span class="op">+</span>c<span class="op">+</span>d</span>
+<span id="cb109-8"><a href="#cb109-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb109-9"><a href="#cb109-9" aria-hidden="true" tabindex="-1"></a>shape<span class="op">|</span>translate(x<span class="op">=-</span><span class="dv">150</span><span class="op">+</span>dx<span class="op">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="208">
+<p><img src="joy_files/figure-html/cell-85-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.613198Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.612904Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.618543Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.617626Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.613165Z&quot;}" data-execution_count="209">
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> row(shapes):</span>
+<span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a>    n<span class="op">=</span><span class="bu">len</span>(shapes)</span>
+<span id="cb110-3"><a href="#cb110-3" aria-hidden="true" tabindex="-1"></a>    dx<span class="op">=</span><span class="dv">300</span><span class="op">/</span>n</span>
+<span id="cb110-4"><a href="#cb110-4" aria-hidden="true" tabindex="-1"></a>    offset<span class="op">=-</span><span class="dv">150</span> <span class="op">+</span> dx<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb110-5"><a href="#cb110-5" aria-hidden="true" tabindex="-1"></a>    new_shapes<span class="op">=</span>[shapes[i]<span class="op">|</span>scale(<span class="dv">1</span><span class="op">/</span>n)<span class="op">|</span>translate(x<span class="op">=</span>dx<span class="op">*</span>i) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n)]</span>
+<span id="cb110-6"><a href="#cb110-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> combine(new_shapes)<span class="op">|</span>translate(x<span class="op">=</span>offset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.619543Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.619311Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.624783Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.623809Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.619520Z&quot;}" data-execution_count="210">
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb111-1"><a href="#cb111-1" aria-hidden="true" tabindex="-1"></a>row([s1, s2])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="210">
+<p><img src="joy_files/figure-html/cell-87-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.626213Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.625932Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.631823Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.631122Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.626184Z&quot;}" data-execution_count="211">
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a>row([concentric_circles(<span class="dv">150</span>, <span class="dv">10</span>), concentric_circles(<span class="dv">150</span>, <span class="dv">4</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="211">
+<p><img src="joy_files/figure-html/cell-88-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.633315Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.633009Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.640114Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.639277Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.633281Z&quot;}" data-execution_count="212">
+<div class="sourceCode cell-code" id="cb113"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb113-1"><a href="#cb113-1" aria-hidden="true" tabindex="-1"></a>row([concentric_circles(<span class="dv">150</span>, <span class="dv">1</span>),</span>
+<span id="cb113-2"><a href="#cb113-2" aria-hidden="true" tabindex="-1"></a>     concentric_circles(<span class="dv">150</span>, <span class="dv">2</span>),</span>
+<span id="cb113-3"><a href="#cb113-3" aria-hidden="true" tabindex="-1"></a>     concentric_circles(<span class="dv">150</span>, <span class="dv">3</span>),</span>
+<span id="cb113-4"><a href="#cb113-4" aria-hidden="true" tabindex="-1"></a>     concentric_circles(<span class="dv">150</span>, <span class="dv">4</span>), </span>
+<span id="cb113-5"><a href="#cb113-5" aria-hidden="true" tabindex="-1"></a>     concentric_circles(<span class="dv">150</span>, <span class="dv">5</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="212">
+<p><img src="joy_files/figure-html/cell-89-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.641117Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.640889Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.645442Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.644402Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.641093Z&quot;}" data-execution_count="213">
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> row_of_concentric_circles(n):</span>
+<span id="cb114-2"><a href="#cb114-2" aria-hidden="true" tabindex="-1"></a>    shapes<span class="op">=</span>[concentric_circles(<span class="dv">150</span>, n<span class="op">-</span>i) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n)]</span>
+<span id="cb114-3"><a href="#cb114-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> row(shapes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.646998Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.646752Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.653191Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.652420Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.646973Z&quot;}" data-execution_count="214">
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a>row_of_concentric_circles(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="214">
+<p><img src="joy_files/figure-html/cell-91-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.654693Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.654273Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.660587Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.659761Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.654662Z&quot;}" data-execution_count="215">
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a>[i<span class="op">+</span><span class="dv">1</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="215">
+<pre><code>[1, 2, 3, 4, 5]</code></pre>
+</div>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-10-17T13:49:17.661621Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-10-17T13:49:17.661387Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-10-17T13:49:17.667124Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-10-17T13:49:17.666493Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-10-17T13:49:17.661596Z&quot;}" data-execution_count="216">
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">5</span><span class="op">-</span>i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="216">
+<pre><code>[5, 4, 3, 2, 1]</code></pre>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./intro.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./summary.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
