@@ -1,0 +1,247 @@
+<svg width="300" height="300" viewBox="-150 -150 300 300" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="scale(1 -1)">
+  <g transform="translate(-112.5 -112.5)">
+    <g transform="translate(0.0 0.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-32-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-32-4g12" />
+        <g transform="rotate(45.0)">
+          <use xlink:href="#s-32-4g12" />
+          <g transform="rotate(45.0)">
+            <use xlink:href="#s-32-4g12" />
+            <use xlink:href="#s-32-4g12" transform="rotate(45.0)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0.0 75.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-33-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-33-4g12" />
+        <g transform="rotate(60.0)">
+          <use xlink:href="#s-33-4g12" />
+          <use xlink:href="#s-33-4g12" transform="rotate(60.0)" />
+        </g>
+      </g>
+    </g>
+    <g transform="translate(0.0 150.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-34-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-34-4g12" />
+        <use xlink:href="#s-34-4g12" transform="rotate(90.0)" />
+      </g>
+    </g>
+    <g transform="translate(0.0 225.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-35-4g12" />
+      </defs>
+      <use xlink:href="#s-35-4g12" />
+    </g>
+    <g transform="translate(75.0 0.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-36-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-36-4g12" />
+        <g transform="rotate(36.0)">
+          <use xlink:href="#s-36-4g12" />
+          <g transform="rotate(36.0)">
+            <use xlink:href="#s-36-4g12" />
+            <g transform="rotate(36.0)">
+              <use xlink:href="#s-36-4g12" />
+              <use xlink:href="#s-36-4g12" transform="rotate(36.0)" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(75.0 75.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-37-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-37-4g12" />
+        <g transform="rotate(45.0)">
+          <use xlink:href="#s-37-4g12" />
+          <g transform="rotate(45.0)">
+            <use xlink:href="#s-37-4g12" />
+            <use xlink:href="#s-37-4g12" transform="rotate(45.0)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(75.0 150.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-38-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-38-4g12" />
+        <g transform="rotate(60.0)">
+          <use xlink:href="#s-38-4g12" />
+          <use xlink:href="#s-38-4g12" transform="rotate(60.0)" />
+        </g>
+      </g>
+    </g>
+    <g transform="translate(75.0 225.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-39-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-39-4g12" />
+        <use xlink:href="#s-39-4g12" transform="rotate(90.0)" />
+      </g>
+    </g>
+    <g transform="translate(150.0 0.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-40-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-40-4g12" />
+        <g transform="rotate(30.0)">
+          <use xlink:href="#s-40-4g12" />
+          <g transform="rotate(30.0)">
+            <use xlink:href="#s-40-4g12" />
+            <g transform="rotate(30.0)">
+              <use xlink:href="#s-40-4g12" />
+              <g transform="rotate(30.0)">
+                <use xlink:href="#s-40-4g12" />
+                <use xlink:href="#s-40-4g12" transform="rotate(30.0)" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(150.0 75.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-41-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-41-4g12" />
+        <g transform="rotate(36.0)">
+          <use xlink:href="#s-41-4g12" />
+          <g transform="rotate(36.0)">
+            <use xlink:href="#s-41-4g12" />
+            <g transform="rotate(36.0)">
+              <use xlink:href="#s-41-4g12" />
+              <use xlink:href="#s-41-4g12" transform="rotate(36.0)" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(150.0 150.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-42-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-42-4g12" />
+        <g transform="rotate(45.0)">
+          <use xlink:href="#s-42-4g12" />
+          <g transform="rotate(45.0)">
+            <use xlink:href="#s-42-4g12" />
+            <use xlink:href="#s-42-4g12" transform="rotate(45.0)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(150.0 225.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-43-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-43-4g12" />
+        <g transform="rotate(60.0)">
+          <use xlink:href="#s-43-4g12" />
+          <use xlink:href="#s-43-4g12" transform="rotate(60.0)" />
+        </g>
+      </g>
+    </g>
+    <g transform="translate(225.0 0.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-44-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-44-4g12" />
+        <g transform="rotate(25.714285714285715)">
+          <use xlink:href="#s-44-4g12" />
+          <g transform="rotate(25.714285714285715)">
+            <use xlink:href="#s-44-4g12" />
+            <g transform="rotate(25.714285714285715)">
+              <use xlink:href="#s-44-4g12" />
+              <g transform="rotate(25.714285714285715)">
+                <use xlink:href="#s-44-4g12" />
+                <g transform="rotate(25.714285714285715)">
+                  <use xlink:href="#s-44-4g12" />
+                  <use xlink:href="#s-44-4g12" transform="rotate(25.714285714285715)" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(225.0 75.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-45-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-45-4g12" />
+        <g transform="rotate(30.0)">
+          <use xlink:href="#s-45-4g12" />
+          <g transform="rotate(30.0)">
+            <use xlink:href="#s-45-4g12" />
+            <g transform="rotate(30.0)">
+              <use xlink:href="#s-45-4g12" />
+              <g transform="rotate(30.0)">
+                <use xlink:href="#s-45-4g12" />
+                <use xlink:href="#s-45-4g12" transform="rotate(30.0)" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(225.0 150.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-46-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-46-4g12" />
+        <g transform="rotate(36.0)">
+          <use xlink:href="#s-46-4g12" />
+          <g transform="rotate(36.0)">
+            <use xlink:href="#s-46-4g12" />
+            <g transform="rotate(36.0)">
+              <use xlink:href="#s-46-4g12" />
+              <use xlink:href="#s-46-4g12" transform="rotate(36.0)" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(225.0 225.0) scale(0.9 0.9)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="37.5" ry="18.75" id="s-47-4g12" />
+      </defs>
+      <g>
+        <use xlink:href="#s-47-4g12" />
+        <g transform="rotate(45.0)">
+          <use xlink:href="#s-47-4g12" />
+          <g transform="rotate(45.0)">
+            <use xlink:href="#s-47-4g12" />
+            <use xlink:href="#s-47-4g12" transform="rotate(45.0)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>
+

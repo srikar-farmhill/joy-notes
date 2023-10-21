@@ -1,0 +1,13 @@
+<svg width="300" height="300" viewBox="-150 -150 300 300" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="scale(1 -1)">
+  <g transform="translate(0 -100)">
+    <circle cx="0" cy="14.285714285714286" r="14.285714285714286" />
+    <circle cx="0" cy="28.571428571428573" r="28.571428571428573" />
+    <circle cx="0" cy="42.85714285714286" r="42.85714285714286" />
+    <circle cx="0" cy="57.142857142857146" r="57.142857142857146" />
+    <circle cx="0" cy="71.42857142857143" r="71.42857142857143" />
+    <circle cx="0" cy="85.71428571428572" r="85.71428571428572" />
+    <circle cx="0" cy="100.0" r="100.0" />
+  </g>
+</g>
+</svg>

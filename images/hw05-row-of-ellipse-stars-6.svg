@@ -1,0 +1,88 @@
+<svg width="300" height="300" viewBox="-150 -150 300 300" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="scale(1 -1)">
+  <g transform="translate(-125.0 0)">
+    <g transform="translate(0.0 0) scale(0.16666666666666666 0.16666666666666666)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="100.0" ry="50.0" id="s-18-00IQ" />
+      </defs>
+      <use xlink:href="#s-18-00IQ" />
+    </g>
+    <g transform="translate(50.0 0) scale(0.16666666666666666 0.16666666666666666)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="100.0" ry="50.0" id="s-19-00IQ" />
+      </defs>
+      <g>
+        <use xlink:href="#s-19-00IQ" />
+        <use xlink:href="#s-19-00IQ" transform="rotate(90.0)" />
+      </g>
+    </g>
+    <g transform="translate(100.0 0) scale(0.16666666666666666 0.16666666666666666)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="100.0" ry="50.0" id="s-20-00IQ" />
+      </defs>
+      <g>
+        <use xlink:href="#s-20-00IQ" />
+        <g transform="rotate(60.0)">
+          <use xlink:href="#s-20-00IQ" />
+          <use xlink:href="#s-20-00IQ" transform="rotate(60.0)" />
+        </g>
+      </g>
+    </g>
+    <g transform="translate(150.0 0) scale(0.16666666666666666 0.16666666666666666)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="100.0" ry="50.0" id="s-21-00IQ" />
+      </defs>
+      <g>
+        <use xlink:href="#s-21-00IQ" />
+        <g transform="rotate(45.0)">
+          <use xlink:href="#s-21-00IQ" />
+          <g transform="rotate(45.0)">
+            <use xlink:href="#s-21-00IQ" />
+            <use xlink:href="#s-21-00IQ" transform="rotate(45.0)" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(200.0 0) scale(0.16666666666666666 0.16666666666666666)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="100.0" ry="50.0" id="s-22-00IQ" />
+      </defs>
+      <g>
+        <use xlink:href="#s-22-00IQ" />
+        <g transform="rotate(36.0)">
+          <use xlink:href="#s-22-00IQ" />
+          <g transform="rotate(36.0)">
+            <use xlink:href="#s-22-00IQ" />
+            <g transform="rotate(36.0)">
+              <use xlink:href="#s-22-00IQ" />
+              <use xlink:href="#s-22-00IQ" transform="rotate(36.0)" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(250.0 0) scale(0.16666666666666666 0.16666666666666666)">
+      <defs>
+        <ellipse cx="0" cy="0" rx="100.0" ry="50.0" id="s-23-00IQ" />
+      </defs>
+      <g>
+        <use xlink:href="#s-23-00IQ" />
+        <g transform="rotate(30.0)">
+          <use xlink:href="#s-23-00IQ" />
+          <g transform="rotate(30.0)">
+            <use xlink:href="#s-23-00IQ" />
+            <g transform="rotate(30.0)">
+              <use xlink:href="#s-23-00IQ" />
+              <g transform="rotate(30.0)">
+                <use xlink:href="#s-23-00IQ" />
+                <use xlink:href="#s-23-00IQ" transform="rotate(30.0)" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>
+

@@ -1,0 +1,26 @@
+<svg width="300" height="300" viewBox="-150 -150 300 300" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="scale(1 -1)">
+  <g>
+    <defs>
+      <rect x="-150.0" y="-150.0" width="300" height="300" id="s-2-Ym2Q" />
+    </defs>
+    <g>
+      <use xlink:href="#s-2-Ym2Q" />
+      <g transform="scale(0.7071067811865475 0.7071067811865475) rotate(45)">
+        <use xlink:href="#s-2-Ym2Q" />
+        <g transform="scale(0.7071067811865475 0.7071067811865475) rotate(45)">
+          <use xlink:href="#s-2-Ym2Q" />
+          <g transform="scale(0.7071067811865475 0.7071067811865475) rotate(45)">
+            <use xlink:href="#s-2-Ym2Q" />
+            <g transform="scale(0.7071067811865475 0.7071067811865475) rotate(45)">
+              <use xlink:href="#s-2-Ym2Q" />
+              <use xlink:href="#s-2-Ym2Q" transform="scale(0.7071067811865475 0.7071067811865475) rotate(45)" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>
+

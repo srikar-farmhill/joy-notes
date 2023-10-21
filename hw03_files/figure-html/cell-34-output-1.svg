@@ -1,0 +1,58 @@
+<svg width="300" height="300" viewBox="-150 -150 300 300" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="scale(1 -1)">
+  <g>
+    <g transform="translate(0 75) scale(1 0.5)">
+      <g transform="translate(-75 0) scale(0.5 1)">
+        <circle cx="0" cy="0" r="22.988673239673503" />
+        <circle cx="0" cy="0" r="33.656216045256386" />
+        <circle cx="0" cy="0" r="8.806733522443988" />
+        <circle cx="0" cy="0" r="60.966119983940565" />
+        <circle cx="0" cy="0" r="13.784355992467509" />
+        <circle cx="0" cy="0" r="9.030716031963024" />
+        <circle cx="0" cy="0" r="35.22063152192015" />
+        <circle cx="0" cy="0" r="111.72654694493934" />
+        <circle cx="0" cy="0" r="98.44561287367092" />
+        <circle cx="0" cy="0" r="6.687742949992817" />
+      </g>
+      <g transform="translate(75 0) scale(0.5 1)">
+        <circle cx="0" cy="0" r="69.21385591361484" />
+        <circle cx="0" cy="0" r="36.59023106665519" />
+        <circle cx="0" cy="0" r="46.23183685373031" />
+        <circle cx="0" cy="0" r="14.09465432240227" />
+        <circle cx="0" cy="0" r="26.370299154200723" />
+        <circle cx="0" cy="0" r="38.796374190305656" />
+        <circle cx="0" cy="0" r="24.54798190929368" />
+        <circle cx="0" cy="0" r="31.818849713886753" />
+        <circle cx="0" cy="0" r="30.264023331074767" />
+        <circle cx="0" cy="0" r="63.28647099688688" />
+      </g>
+    </g>
+    <g transform="translate(0 -75) scale(1 0.5)">
+      <g transform="translate(-75 0) scale(0.5 1)">
+        <circle cx="0" cy="0" r="86.04822747162989" />
+        <circle cx="0" cy="0" r="52.115975860350495" />
+        <circle cx="0" cy="0" r="36.18039597248831" />
+        <circle cx="0" cy="0" r="107.42642087267971" />
+        <circle cx="0" cy="0" r="39.30765955782552" />
+        <circle cx="0" cy="0" r="82.5914572798776" />
+        <circle cx="0" cy="0" r="115.44952182665789" />
+        <circle cx="0" cy="0" r="70.92008881116807" />
+        <circle cx="0" cy="0" r="118.33746666286073" />
+        <circle cx="0" cy="0" r="111.67449788991732" />
+      </g>
+      <g transform="translate(75 0) scale(0.5 1)">
+        <circle cx="0" cy="0" r="24.317561880071988" />
+        <circle cx="0" cy="0" r="81.1885252698079" />
+        <circle cx="0" cy="0" r="8.132300377762094" />
+        <circle cx="0" cy="0" r="5.912304627550657" />
+        <circle cx="0" cy="0" r="85.95506994935113" />
+        <circle cx="0" cy="0" r="72.64090772612231" />
+        <circle cx="0" cy="0" r="0.9583750155680165" />
+        <circle cx="0" cy="0" r="30.93600927243391" />
+        <circle cx="0" cy="0" r="68.2416772271742" />
+        <circle cx="0" cy="0" r="66.47625726142077" />
+      </g>
+    </g>
+  </g>
+</g>
+</svg>

@@ -1,0 +1,45 @@
+<svg width="300" height="300" viewBox="-150 -150 300 300" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="scale(1 -1)">
+  <g>
+    <defs>
+      <g id="s-3-WsUV">
+        <defs>
+          <circle cx="-125" cy="125" r="25" id="s-2-WsUV" />
+        </defs>
+        <g>
+          <use xlink:href="#s-2-WsUV" />
+          <g transform="translate(50 0)">
+            <use xlink:href="#s-2-WsUV" />
+            <g transform="translate(50 0)">
+              <use xlink:href="#s-2-WsUV" />
+              <g transform="translate(50 0)">
+                <use xlink:href="#s-2-WsUV" />
+                <g transform="translate(50 0)">
+                  <use xlink:href="#s-2-WsUV" />
+                  <use xlink:href="#s-2-WsUV" transform="translate(50 0)" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </defs>
+    <g>
+      <use xlink:href="#s-3-WsUV" />
+      <g transform="translate(0 -50)">
+        <use xlink:href="#s-3-WsUV" />
+        <g transform="translate(0 -50)">
+          <use xlink:href="#s-3-WsUV" />
+          <g transform="translate(0 -50)">
+            <use xlink:href="#s-3-WsUV" />
+            <g transform="translate(0 -50)">
+              <use xlink:href="#s-3-WsUV" />
+              <use xlink:href="#s-3-WsUV" transform="translate(0 -50)" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>

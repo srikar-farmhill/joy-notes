@@ -49,9 +49,121 @@
     "text": "4.2 A Row of Shapes\n\ns1=circle()\ns2=rectangle()\n\n\ns1+s2\n\n\n\n\n\na=s1|scale(0.5)|translate(x=-100)\n\nb=s2|scale(0.5)|translate(x=100)\n\na+b\n\n\n\n\n\ns1=concentric_circles(150, 1)\ns2=concentric_circles(150, 2)\ns3=concentric_circles(150, 3)\ns4=concentric_circles(150, 4)\n\n\na=s1|scale(1/3)|translate(x=-100)\nb=s2|scale(1/3)\nc=s3|scale(1/3)|translate(x=100)\n\na+b+c\n\n\n\n\n\ndx = 300/4\na=s1|scale(1/4)|translate(x=0)\nb=s2|scale(1/4)|translate(x=dx)\nc=s3|scale(1/4)|translate(x=2*dx)\nd=s4|scale(1/4)|translate(x=3*dx)\n\nshape = a+b+c+d\n\nshape|translate(x=-150+dx/2)\n\n\n\n\n\ndef row(shapes):\n    n=len(shapes)\n    dx=300/n\n    offset=-150 + dx/2\n    new_shapes=[shapes[i]|scale(1/n)|translate(x=dx*i) for i in range(n)]\n    return combine(new_shapes)|translate(x=offset)\n\n\nrow([s1, s2])\n\n\n\n\n\nrow([concentric_circles(150, 10), concentric_circles(150, 4)])\n\n\n\n\n\nrow([concentric_circles(150, 1),\n     concentric_circles(150, 2),\n     concentric_circles(150, 3),\n     concentric_circles(150, 4), \n     concentric_circles(150, 5)])\n\n\n\n\n\ndef row_of_concentric_circles(n):\n    shapes=[concentric_circles(150, n-i) for i in range(n)]\n    return row(shapes)\n\n\nrow_of_concentric_circles(5)\n\n\n\n\n\n[i+1 for i in range(5)]\n\n[1, 2, 3, 4, 5]\n\n\n\n[5-i for i in range(5)]\n\n[5, 4, 3, 2, 1]"
   },
   {
+    "objectID": "hw03.html#problem-1-square-in-square",
+    "href": "hw03.html#problem-1-square-in-square",
+    "title": "3  Home Work - 03",
+    "section": "3.1 Problem 1: Square in square",
+    "text": "3.1 Problem 1: Square in square\nWrite Python code to draw the following image.\nPlease note that there are a total of 6 squares in this image. What scaling factor would you use and why?\n\n\nrectangle(w=300, h=300) | repeat(6, scale(0.7)| rotate(45))"
+  },
+  {
+    "objectID": "hw03.html#problem-2-star",
+    "href": "hw03.html#problem-2-star",
+    "title": "3  Home Work - 03",
+    "section": "3.2 Problem 2: Star",
+    "text": "3.2 Problem 2: Star\nWrite a function star that takes a number n as argument and creates a start using n ellipses as shown below.\n\n\n\n\n\n\n\nstar(2)\n\n\n\n\n\n\n\nstar(3)\n\n\n\n\n\n\n\nstar(4)\n\n\n\n\n\n\n\ndef ellipse_star(n):\n    return ellipse(w=150, h=75)|repeat(n, rotate(180/n))\n\n\nellipse_star(4)"
+  },
+  {
+    "objectID": "hw03.html#problem-3-interactive-star",
+    "href": "hw03.html#problem-3-interactive-star",
+    "title": "3  Home Work - 03",
+    "section": "3.3 Problem 3: Interactive Star",
+    "text": "3.3 Problem 3: Interactive Star\nMake the star function interatve by adding a slider to change the value of n from 1 to 10.\n\ninteract(ellipse_star, n=IntSlider(value=4, min=1, max=10, step=1))\n\n\n\n\n&lt;function __main__.ellipse_star(n)&gt;"
+  },
+  {
+    "objectID": "hw03.html#problem-4-random-circles-in-grid",
+    "href": "hw03.html#problem-4-random-circles-in-grid",
+    "title": "3  Home Work - 03",
+    "section": "3.4 Problem 4: Random Circles in Grid",
+    "text": "3.4 Problem 4: Random Circles in Grid\nWrite a function random_circles to create a shape with many random concentric circles and use that to put it in a grid. You can use the beside, below and grid function defined in the last class. They are included below for your convenience.\n\n\ndef beside(s1, s2):\n    s1 = s1 | scale(x=0.5) | translate(x=-75)\n    s2 = s2 | scale(x=0.5) | translate(x=75)    \n    return s1+s2\n\ndef below(s1, s2):\n    s1 = s1 | scale(y=0.5) | translate(y=75)\n    s2 = s2 | scale(y=0.5) | translate(y=-75)    \n    return s1+s2\n\ndef grid(s1, s2, s3, s4):\n    return below(\n        beside(s1, s2),\n        beside(s3, s4))\n\n\ndef random_circles(r, n):\n    shapes = [circle(r=random(r)) for i in range(n)]\n    return combine(shapes)\n\n\ndef repeat4(shape):\n    return grid(shape, shape, shape, shape)\n\n\ngrid(random_circles(100, 25), random_circles(100, 25), random_circles(100, 25), random_circles(100, 25))"
+  },
+  {
+    "objectID": "hw03.html#problem-5-more-concentric-circles-in-a-grid",
+    "href": "hw03.html#problem-5-more-concentric-circles-in-a-grid",
+    "title": "3  Home Work - 03",
+    "section": "3.5 Problem 5: More Concentric Circles in a Grid",
+    "text": "3.5 Problem 5: More Concentric Circles in a Grid\nWhat does it take to put many more concentric circles in a large grid? Will you be able to put 64 of them in an 8x8 grid as shown below?\n\n\nrepeat4(repeat4(repeat4(random_circles(150, 105))))\n\n\n\n\n\ndef random_circles_2():\n    return random_circles(r=125, n=10)\n\n\nrandom_circles_2()\n\n\n\n\n\ndef random_circle_grid():\n    return grid(random_circles_2(), random_circles_2(), random_circles_2(), random_circles_2())\n\n\nrandom_circle_grid()\n\n\n\n\n\ndef random_circle_megagrid():\n    return grid(random_circle_grid(), random_circle_grid(), random_circle_grid(), random_circle_grid())\n\n\nrandom_circle_megagrid()\n\n\n\n\n\ndef random_circle_supergrid():\n    return grid(random_circle_megagrid(), random_circle_megagrid(), random_circle_megagrid(), random_circle_megagrid())\n\n\nrandom_circle_supergrid()\n\n\n\n\n\nx=1\n\n\ny=x\n\n\ny\n\n1\n\n\n\nrandom_circles_2()\n\n\n\n\n\nf=random_circles_2\nf\n\n&lt;function __main__.random_circles_2()&gt;\n\n\n\nf()\n\n\n\n\n\ndef grid_1(shape_maker):\n    return grid(shape_maker(), shape_maker(), shape_maker(), shape_maker())\n\n\ngrid_1(random_circles_2)\n\n\n\n\n\ndef square(w):\n    return rectangle(w=w, h=w)\n\ndef random_squares(w=250, n=15):\n    shapes = [square(w=random(w)) for i in range(n)]\n    return combine(shapes)\n\n\nrandom_squares()\n\n\n\n\n\ngrid_1(random_squares)\n\n\n\n\n\ndef grid_2(shape_maker):\n    def grid_maker():\n        return grid_1(shape_maker)\n    return grid_1(grid_maker)\n\n\ngrid_2(random_circles_2)\n\n\n\n\n\ngrid_2(random_squares)\n\n\n\n\n\ndef grid_3(shape_maker):\n    def grid_maker():\n        return grid_1(shape_maker)\n    return grid_2(grid_maker)\n\n\ngrid_3(random_squares)"
+  },
+  {
+    "objectID": "hw04.html#problem-1-random-concentric-circles-in-a-6x6-grid",
+    "href": "hw04.html#problem-1-random-concentric-circles-in-a-6x6-grid",
+    "title": "4  Home Work - 04",
+    "section": "4.1 Problem 1: Random Concentric Circles in a 6x6 Grid",
+    "text": "4.1 Problem 1: Random Concentric Circles in a 6x6 Grid\nArrange random concentric circles in a 6x6 grid as shown in the image below.\n\n\ndef circle_row(n):\n    return circle(x=-125, y=125, r=(25))|repeat(n, translate(x=50))\n\n\ncircle_row(6)|repeat(6, translate(y=-50))"
+  },
+  {
+    "objectID": "hw04.html#problem-2-random-concentric-squares-in-a-6x6-grid",
+    "href": "hw04.html#problem-2-random-concentric-squares-in-a-6x6-grid",
+    "title": "4  Home Work - 04",
+    "section": "4.2 Problem 2: : Random Concentric Squares in a 6x6 Grid",
+    "text": "4.2 Problem 2: : Random Concentric Squares in a 6x6 Grid\nCan you make the solution to the above problem generic enough that it could be used to make a 6x6 grid of random concentric squares as shown in the image below.\n\n\ndef square_row():\n    return rectangle(w=45, h=45, x=-125, y=125)|repeat(6, translate(x=50))\n\n\nsquare_row()\n\n\n\n\n\nsquare_row()|repeat(6, translate(y=-50))"
+  },
+  {
+    "objectID": "hw04.html#problem-3-concentric-circles",
+    "href": "hw04.html#problem-3-concentric-circles",
+    "title": "4  Home Work - 04",
+    "section": "4.3 Problem 3: Concentric circles",
+    "text": "4.3 Problem 3: Concentric circles\nWrite a function concentric_circles that takes two arguments r and n, and creates n concentric circles with the outer most circle with radius r and with all circles equally distributed from the center, as shown in the pictures below.\n\n\n\n\n\n\n\nconcentric_circles(r=100, n=2)\n\n\n\n\n\n\n\nconcentric_circles(r=100, n=4)\n\n\n\n\n\n\n\nconcentric_circles(r=100, n=8)\n\n\n\n\n\n\n\ndef concentric_circles(n=4):\n    return circle(r=100)| repeat(n, scale(1-1/n))\n\n\nconcentric_circles()"
+  },
+  {
+    "objectID": "hw04.html#problem-4-concentric-circles-in-a-grid",
+    "href": "hw04.html#problem-4-concentric-circles-in-a-grid",
+    "title": "4  Home Work - 04",
+    "section": "4.4 Problem 4: Concentric Circles in a Grid",
+    "text": "4.4 Problem 4: Concentric Circles in a Grid\nWrite a program to create a grid of concentric circles as shown in the image below.\n\n\nfrom wizard import *\n\ndef repeat4(shape):\n    return grid(shape, shape, shape, shape)\n\ndef grid(s1, s2, s3, s4):\n    return below(\n        beside(s1, s2),\n        beside(s3, s4))\n\ndef grid_1(shape_maker):\n    return grid(shape_maker(), shape_maker(), shape_maker(), shape_maker())\n\ndef grid_2(shape_maker):\n    def grid_maker():\n        return grid_1(shape_maker)\n    return grid_1(grid_maker)\n\n\ngrid_2(concentric_circles)"
+  },
+  {
+    "objectID": "hw04.html#problem-5-ellipse-stars-in-a-grid",
+    "href": "hw04.html#problem-5-ellipse-stars-in-a-grid",
+    "title": "4  Home Work - 04",
+    "section": "4.5 Problem 5: Ellipse Stars in a Grid",
+    "text": "4.5 Problem 5: Ellipse Stars in a Grid\nCan you generalize the above program and use it to draw ellipse stars in a grid instead of concentric circles."
+  },
+  {
+    "objectID": "hw05.html#problem-1-concentric-squares",
+    "href": "hw05.html#problem-1-concentric-squares",
+    "title": "5  Homework 05",
+    "section": "5.1 Problem 1: Concentric Squares",
+    "text": "5.1 Problem 1: Concentric Squares\nWrite a function concentric_sqares that takes the size and n as arguments and creates n equally spaced concentric squares with the outer square having width and height of size.\n\n\n\n\n\n\n\nconcentric_squares(200, 4)\n\n\n\n\n\n\n\nconcentric_squares(200, 6)\n\n\n\n\n\n\n\nfrom wizard import *\n\n\ndef concentric_circles(radius, n):\n    delta = radius/n\n    circles = [circle(r=i*delta) for i in range(1, n+1)]\n    return combine(circles)\n\n\ndef concentric_squares(w, n):\n    dx = w/n\n    squares = [rectangle(w=i*dx, h=i*dx) for i in range(1, n+1)]\n    return combine(squares)\n\n\nconcentric_squares(200, 34)"
+  },
+  {
+    "objectID": "hw05.html#problem-2-column-of-shapes",
+    "href": "hw05.html#problem-2-column-of-shapes",
+    "title": "5  Homework 05",
+    "section": "5.2 Problem 2: Column of Shapes",
+    "text": "5.2 Problem 2: Column of Shapes\nWrite a function column that takes a list of shapes and arranges them in a column, from top to bottom.\n\n\n\ncolumn([circle(), ellipse(), rectangle(), line()])\n\n\n\ndef row(shapes):\n    n=len(shapes)\n    dx=300/n\n    offset=-150 + dx/2\n    new_shapes=[shapes[i]|scale(1/n)|translate(x=dx*i) for i in range(n)]\n    return combine(new_shapes)|translate(x=offset)\n\n\nrow([circle(), rectangle(), ellipse(), line()])"
+  },
+  {
+    "objectID": "hw05.html#problem-3-row-of-ellipse-stars",
+    "href": "hw05.html#problem-3-row-of-ellipse-stars",
+    "title": "5  Homework 05",
+    "section": "5.3 Problem 3: Row of Ellipse Stars",
+    "text": "5.3 Problem 3: Row of Ellipse Stars\nWrite a function row_of_ellipse_stars that take a number n as argument and create n ellipse stars with number of ellipses from 1 to n, placed in a row.\n\n\n\n\n\n\n\nrow_of_ellipse_stars(3)\n\n\n\n\n\n\n\nrow_of_ellipse_stars(6)\n\n\n\n\n\n\n\ndef ellipse_star(n):\n    return ellipse(w=150, h=75)|repeat(n, rotate(180/n))\n\n\ndef row_of_ellipse_stars(n):\n    sequence = [ellipse_star(n) for i in range(1, n+1)]\n    return sequence\n\n\nrow_of_ellipse_stars(3)\n\n[&lt;g {}&gt;, &lt;g {}&gt;, &lt;g {}&gt;]"
+  },
+  {
+    "objectID": "hw05.html#problem-4-con-bottom-ic-circles",
+    "href": "hw05.html#problem-4-con-bottom-ic-circles",
+    "title": "5  Homework 05",
+    "section": "5.4 Problem 4: Con-bottom-ic Circles",
+    "text": "5.4 Problem 4: Con-bottom-ic Circles\nWrite a function conbottomic_circles that takes r and n as arguments and draws n circles touching at the bottom point, with uniformly increasing radius and the outermost circle having a radius of r.\nPlease note that radii of circles in drawn here is exactly same as that in concentric circles with same r and n.\n\n\n\n\n\n\n\nconbottomic_circles(50, 5)\n\n\n\n\n\n\n\nconbottomic_circles(70, 10)\n\n\n\n\n\n\n\nconcentric_circles(50, 5)\n\n\n\n\n\ndef concentric_circles(radius, n):\n    delta = radius/n\n    circles = [circle(r=i*delta) for i in range(1, n+1)]\n    return combine(circles)\n\ndef bcircle(bx=0, by=0, r=50):\n    cx = bx\n    cy = by+r\n    return circle(x=cx, y=cy, r=r)\n\ndef conbottomic_circles(r, n):\n    shift = r/n\n    design = [bcircle(r=i*shift) for i in range(1, n+1)]\n    return combine(design)|translate(y=-r)\n\n\nconbottomic_circles(100, 7)\n\n\n\n\n\nconbottomic_circles(50,3)\n\n\n\n\n\ndef bcircle(bx=0, by=0, r=50):\n    cx = bx\n    cy = by+r\n    return circle(x=cx, y=cy, r=r)\n\n\nbcircle(r=25)+bcircle(r=50)+bcircle(r=75)"
+  },
+  {
+    "objectID": "hw05.html#problem-5-touching-circles",
+    "href": "hw05.html#problem-5-touching-circles",
+    "title": "5  Homework 05",
+    "section": "5.5 Problem 5: Touching Circles",
+    "text": "5.5 Problem 5: Touching Circles\nDraw 5 circles with radius \\(r\\), \\(2r\\), \\(3r\\), \\(4r\\) and \\(5r\\) in a row such that consequetive circles are touching each other and the combined figure takes the full width of 300 px.\n\n\na = circle(r=10,x=-140)\nb = circle(r=20,x=-110)\nc = circle(r=30, x=-60)\nd = circle(r=40,x=10)\ne = circle(r=50,x=100)\na+b+c+d+e"
+  },
+  {
+    "objectID": "hw05.html#problem-6-generic-touching-circles-bonus-problem",
+    "href": "hw05.html#problem-6-generic-touching-circles-bonus-problem",
+    "title": "5  Homework 05",
+    "section": "5.6 Problem 6: Generic Touching Circles (Bonus Problem)",
+    "text": "5.6 Problem 6: Generic Touching Circles (Bonus Problem)\nWrite a function touching_circles that takes a number n as argument and creates a shape with n circles in a row with the consequetive circles touching each other. The radii of the circles uniformly increases from the first circle to the last.\n\n\n\n\n\n\n\ntouching_circles(5)\n\n\n\n\n\n\n\ntouching_circles(8)\n\n\n\n\n\n\n\ndef touching_circles(n):\n    circle_chain = [circle(r=300/2*n, x=r-300) for i in range(1, n+1)]\n    placement = translate(x=2*r) in range(2, r+1)\n    return circle_chain|placement\n\n\ntouching_circles(5)\n\nNameError: name 'r' is not defined"
+  },
+  {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "3  Summary",
+    "title": "6  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever."
   },
