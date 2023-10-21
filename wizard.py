@@ -1,0 +1,77 @@
+from joy import *
+from ipywidgets import interact, IntSlider, FloatSlider
+
+def ellipse_star(n):
+    return ellipse(w=150, h=75)|repeat(n, rotate(180/n))
+
+def beside(s1, s2):
+    s1 = s1 | scale(x=0.5) | translate(x=-75)
+    s2 = s2 | scale(x=0.5) | translate(x=75)    
+    return s1+s2
+
+def below(s1, s2):
+    s1 = s1 | scale(y=0.5) | translate(y=75)
+    s2 = s2 | scale(y=0.5) | translate(y=-75)    
+    return s1+s2
+
+def grid(s1, s2, s3, s4):
+    return below(
+        beside(s1, s2),
+        beside(s3, s4))
+
+def random_circles(r=125, n=10):
+    shapes = [circle(r=random(r)) for i in range(n)]
+    return combine(shapes)
+
+def square(w):
+    """
+    Creates a rectangle with a given width, and height equal to the given width.
+
+    Example:
+
+    square(100)
+    Gives a rectangle with width=100, and height equal to width that is, equal to 100.
+    """
+    return rectangle(w=w, h=w)
+
+def random_squares(w=250, n=15):
+    shapes = [square(w=random(w)) for i in range(n)]
+    return combine(shapes)
+
+def repeat4(shape):
+    return grid(shape, shape, shape, shape)
+
+def grid_1(shape_maker):
+    return grid(shape_maker(), shape_maker(), shape_maker(), shape_maker())
+
+def grid_2(shape_maker):
+    def grid_maker():
+        return grid_1(shape_maker)
+    return grid_1(grid_maker)
+
+def grid_3(shape_maker):
+    def grid_maker():
+        return grid_1(shape_maker)
+    return grid_2(grid_maker)
+
+def concentric_circles(radius, n):
+    delta = radius/n
+    circles = [circle(r=i*delta) for i in range(1, n+1)]
+    return combine(circles)
+
+def bcircle(bx=0, by=0, r=50):
+    cx = bx
+    cy = by+r
+    return circle(x=cx, y=cy, r=r)
+
+def conbottomic_circles(r, n):
+    shift = r/n
+    design = [bcircle(r=i*shift) for i in range(1, n+1)]
+    return combine(design)|translate(y=-r)
+
+def row(shapes):
+    n=len(shapes)
+    dx=300/n
+    offset=-150 + dx/2
+    new_shapes=[shapes[i]|scale(1/n)|translate(x=dx*i) for i in range(n)]
+    return combine(new_shapes)|translate(x=offset)
