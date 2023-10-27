@@ -75,3 +75,46 @@ def row(shapes):
     offset=-150 + dx/2
     new_shapes=[shapes[i]|scale(1/n)|translate(x=dx*i) for i in range(n)]
     return combine(new_shapes)|translate(x=offset)
+
+def sigma(n):
+    return sum(range(1, n+1))
+
+def lcircle(x, y, r):
+    cx = x+r
+    cy = y
+    c = circle(x=cx, y=cy, r=r)
+    return c
+
+def rcircle(x, y, r):
+    cx = x-r
+    cy = y
+    c = circle(x=cx, y=cy, r=r)
+    return c
+
+def left_touching_circles(n):
+    r0 = 150/sigma(n)
+    x = -150
+    y = 0
+    r = r0
+    shapes = []
+    for i in range(n):
+        c = lcircle(x, y, r)
+        x = x+2*r
+        y = 0
+        r = r+r0
+        shapes.append(c)
+    return combine(shapes)
+
+def right_touching_circles(n):
+    r0 = 150/sigma(n)
+    x = 150
+    y = 0
+    r = r0
+    circles = []
+    for i in range(n):
+        c = rcircle(x, y, r)
+        x = x-2*r
+        y = 0
+        r = r+r0
+        circles.append(c)
+    return combine(circles)
