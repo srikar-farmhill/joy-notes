@@ -214,6 +214,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#problem-5-touching-circles" id="toc-problem-5-touching-circles" class="nav-link" data-scroll-target="#problem-5-touching-circles"><span class="header-section-number">5.5</span> Problem 5: Touching Circles</a></li>
   <li><a href="#problem-6-generic-touching-circles-bonus-problem" id="toc-problem-6-generic-touching-circles-bonus-problem" class="nav-link" data-scroll-target="#problem-6-generic-touching-circles-bonus-problem"><span class="header-section-number">5.6</span> Problem 6: Generic Touching Circles (Bonus Problem)</a></li>
   <li><a href="#solution-functions-for-touching-circles" id="toc-solution-functions-for-touching-circles" class="nav-link" data-scroll-target="#solution-functions-for-touching-circles"><span class="header-section-number">6</span> Solution Functions for Touching Circles</a></li>
+  <li><a href="#bonus-function-right-touching-circles" id="toc-bonus-function-right-touching-circles" class="nav-link" data-scroll-target="#bonus-function-right-touching-circles"><span class="header-section-number">7</span> Bonus Function: Right Touching Circles</a></li>
   </ul>
 </nav>
     </div>
@@ -564,6 +565,10 @@ figcaption code {
 <p><img src="hw05_files/figure-html/cell-27-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
+</section>
+<section id="bonus-function-right-touching-circles" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Bonus Function: Right Touching Circles</h1>
+<p>In this variant, the smallest circle starts form the right, hence the name. Therefore, although the function right_touching_circles is otherwise structurally identical to left_touching_circles, x = 150, and c is rcircle instead of lcircle. Furthermore, the x in c is x-2 * r rather than x+2 * r. These small, simple changes effectively flip left_touching_circles, giving an entirely new function!</p>
 <div class="cell" data-execution_count="50">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>]</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>x.append(<span class="dv">3</span>)</span>
