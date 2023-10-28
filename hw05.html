@@ -213,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#problem-4-con-bottom-ic-circles" id="toc-problem-4-con-bottom-ic-circles" class="nav-link" data-scroll-target="#problem-4-con-bottom-ic-circles"><span class="header-section-number">5.4</span> Problem 4: Con-bottom-ic Circles</a></li>
   <li><a href="#problem-5-touching-circles" id="toc-problem-5-touching-circles" class="nav-link" data-scroll-target="#problem-5-touching-circles"><span class="header-section-number">5.5</span> Problem 5: Touching Circles</a></li>
   <li><a href="#problem-6-generic-touching-circles-bonus-problem" id="toc-problem-6-generic-touching-circles-bonus-problem" class="nav-link" data-scroll-target="#problem-6-generic-touching-circles-bonus-problem"><span class="header-section-number">5.6</span> Problem 6: Generic Touching Circles (Bonus Problem)</a></li>
-  <li><a href="#solution-functioons-for-touching-circles" id="toc-solution-functioons-for-touching-circles" class="nav-link" data-scroll-target="#solution-functioons-for-touching-circles"><span class="header-section-number">6</span> Solution Functioons for Touching Circles</a></li>
+  <li><a href="#solution-functions-for-touching-circles" id="toc-solution-functions-for-touching-circles" class="nav-link" data-scroll-target="#solution-functions-for-touching-circles"><span class="header-section-number">6</span> Solution Functions for Touching Circles</a></li>
   </ul>
 </nav>
     </div>
@@ -530,8 +530,8 @@ figcaption code {
 <span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> combine(shapes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="solution-functioons-for-touching-circles" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Solution Functioons for Touching Circles</h1>
+<section id="solution-functions-for-touching-circles" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Solution Functions for Touching Circles</h1>
 <p>First, I wrote the function sigma(n), which adds up all the numbers from 1 to n and returns the result.</p>
 <p>Following that, I wrote the function lcircle(x, y, r). This function takes cx = x+r and cy=y(y doesn’t change). After that, lcircle takes c = a circle with x = cx, y = cy and r = r(the second r being the one in the original function). The final result, c, is returned.</p>
 <p>I further modified lcircle to make a function rcircle(x, y, r). The rcircle function is almost identical to lcircle, except that cx in rcircle = x-r, not x+r.</p>
