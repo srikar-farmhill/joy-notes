@@ -118,3 +118,23 @@ def right_touching_circles(n):
         r = r+r0
         circles.append(c)
     return combine(circles)
+
+def donut(x, y, r):
+    a = circle(x=x, y=y, r=r)
+    b = circle(x=x, y=y, r=r/2)
+    return a+b
+
+def donut_grid(n):
+    size = 300/n
+    r = size/2
+    x = -150+r
+    y = -150+r
+    shapes = []
+    for j in range(n):
+        for i in range(n):
+            c = donut(x, y, r)
+            shapes.append(c)
+            x = x+size
+        y = y+size
+        x = -150+r
+    return combine(shapes)
