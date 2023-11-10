@@ -1,0 +1,169 @@
+<svg width="300" height="300" viewBox="-150 -150 300 300" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="scale(1 -1)">
+  <g>
+    <g transform="translate(-125.0 -125.0)">
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-75.0 -125.0)">
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-25.0 -125.0)">
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(25.0 -125.0)">
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(75.0 -125.0)">
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(125.0 -125.0)">
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-125.0 -75.0)">
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-75.0 -75.0)">
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-25.0 -75.0)">
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(25.0 -75.0)">
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(75.0 -75.0)">
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(125.0 -75.0)">
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-125.0 -25.0)">
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-75.0 -25.0)">
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-25.0 -25.0)">
+      <circle cx="0" cy="0" r="8.333333333333334" />
+      <circle cx="0" cy="0" r="16.666666666666668" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(25.0 -25.0)">
+      <circle cx="0" cy="0" r="8.333333333333334" />
+      <circle cx="0" cy="0" r="16.666666666666668" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(75.0 -25.0)">
+      <circle cx="0" cy="0" r="8.333333333333334" />
+      <circle cx="0" cy="0" r="16.666666666666668" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(125.0 -25.0)">
+      <circle cx="0" cy="0" r="8.333333333333334" />
+      <circle cx="0" cy="0" r="16.666666666666668" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-125.0 25.0)">
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-75.0 25.0)">
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-25.0 25.0)">
+      <circle cx="0" cy="0" r="8.333333333333334" />
+      <circle cx="0" cy="0" r="16.666666666666668" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(25.0 25.0)">
+      <circle cx="0" cy="0" r="6.25" />
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="18.75" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(75.0 25.0)">
+      <circle cx="0" cy="0" r="6.25" />
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="18.75" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(125.0 25.0)">
+      <circle cx="0" cy="0" r="6.25" />
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="18.75" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-125.0 75.0)">
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-75.0 75.0)">
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-25.0 75.0)">
+      <circle cx="0" cy="0" r="8.333333333333334" />
+      <circle cx="0" cy="0" r="16.666666666666668" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(25.0 75.0)">
+      <circle cx="0" cy="0" r="6.25" />
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="18.75" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(75.0 75.0)">
+      <circle cx="0" cy="0" r="5.0" />
+      <circle cx="0" cy="0" r="10.0" />
+      <circle cx="0" cy="0" r="15.0" />
+      <circle cx="0" cy="0" r="20.0" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(125.0 75.0)">
+      <circle cx="0" cy="0" r="5.0" />
+      <circle cx="0" cy="0" r="10.0" />
+      <circle cx="0" cy="0" r="15.0" />
+      <circle cx="0" cy="0" r="20.0" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-125.0 125.0)">
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-75.0 125.0)">
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(-25.0 125.0)">
+      <circle cx="0" cy="0" r="8.333333333333334" />
+      <circle cx="0" cy="0" r="16.666666666666668" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(25.0 125.0)">
+      <circle cx="0" cy="0" r="6.25" />
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="18.75" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(75.0 125.0)">
+      <circle cx="0" cy="0" r="5.0" />
+      <circle cx="0" cy="0" r="10.0" />
+      <circle cx="0" cy="0" r="15.0" />
+      <circle cx="0" cy="0" r="20.0" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+    <g transform="translate(125.0 125.0)">
+      <circle cx="0" cy="0" r="4.166666666666667" />
+      <circle cx="0" cy="0" r="8.333333333333334" />
+      <circle cx="0" cy="0" r="12.5" />
+      <circle cx="0" cy="0" r="16.666666666666668" />
+      <circle cx="0" cy="0" r="20.833333333333336" />
+      <circle cx="0" cy="0" r="25.0" />
+    </g>
+  </g>
+</g>
+</svg>

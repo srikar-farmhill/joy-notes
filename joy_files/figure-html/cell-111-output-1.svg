@@ -1,0 +1,11 @@
+<svg width="300" height="300" viewBox="-150 -150 300 300" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="scale(1 -1)">
+  <g transform="translate(0 -45.0)">
+    <circle cx="0" cy="9.0" r="9.0" />
+    <circle cx="0" cy="18.0" r="18.0" />
+    <circle cx="0" cy="27.0" r="27.0" />
+    <circle cx="0" cy="36.0" r="36.0" />
+    <circle cx="0" cy="45.0" r="45.0" />
+  </g>
+</g>
+</svg>
