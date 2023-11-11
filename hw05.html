@@ -238,10 +238,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<div class="cell" data-execution_count="28">
+<div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> joy <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="29">
+<div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run this cell to make the figures look better with a nice border</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.core.display <span class="im">import</span> HTML</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -259,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="st">&lt;/style&gt;</span></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>HTML(css)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="29">
+<div class="cell-output cell-output-display" data-execution_count="4">
 
 <style type="text/css">
 img {
@@ -299,24 +299,24 @@ figcaption code {
 </tr>
 
 </tbody></table>
-<div class="cell" data-execution_count="30">
+<div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> wizard <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="31">
+<div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> concentric_circles(radius, n):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    delta <span class="op">=</span> radius<span class="op">/</span>n</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    circles <span class="op">=</span> [circle(r<span class="op">=</span>i<span class="op">*</span>delta) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>)]</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> combine(circles)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="32">
+<div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> concentric_squares(w, n):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    dx <span class="op">=</span> w<span class="op">/</span>n</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    squares <span class="op">=</span> [rectangle(w<span class="op">=</span>i<span class="op">*</span>dx, h<span class="op">=</span>i<span class="op">*</span>dx) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>)]</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> combine(squares)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="33">
+<div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>concentric_squares(<span class="dv">200</span>, <span class="dv">34</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="33">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <p><img src="hw05_files/figure-html/cell-7-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -330,7 +330,7 @@ figcaption code {
 <code>column([circle(), ellipse(), rectangle(), line()])</code>
 </figcaption>
 </figure>
-<div class="cell" data-execution_count="34">
+<div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> row(shapes):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    n<span class="op">=</span><span class="bu">len</span>(shapes)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    dx<span class="op">=</span><span class="dv">300</span><span class="op">/</span>n</span>
@@ -338,9 +338,9 @@ figcaption code {
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    new_shapes<span class="op">=</span>[shapes[i]<span class="op">|</span>scale(<span class="dv">1</span><span class="op">/</span>n)<span class="op">|</span>translate(x<span class="op">=</span>dx<span class="op">*</span>i) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n)]</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> combine(new_shapes)<span class="op">|</span>translate(x<span class="op">=</span>offset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="35">
+<div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>row([circle(), rectangle(), ellipse(), line()])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="35">
+<div class="cell-output cell-output-display" data-execution_count="10">
 <p><img src="hw05_files/figure-html/cell-9-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -370,18 +370,18 @@ figcaption code {
 </tr>
 
 </tbody></table>
-<div class="cell" data-execution_count="36">
+<div class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ellipse_star(n):</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ellipse(w<span class="op">=</span><span class="dv">150</span>, h<span class="op">=</span><span class="dv">75</span>)<span class="op">|</span>repeat(n, rotate(<span class="dv">180</span><span class="op">/</span>n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="37">
+<div class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> row_of_ellipse_stars(n):</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    sequence <span class="op">=</span> [ellipse_star(n) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>)]</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> sequence</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="38">
+<div class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>row_of_ellipse_stars(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="38">
+<div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>[&lt;g {}&gt;, &lt;g {}&gt;, &lt;g {}&gt;]</code></pre>
 </div>
 </div>
@@ -412,13 +412,13 @@ figcaption code {
 </tr>
 
 </tbody></table>
-<div class="cell" data-execution_count="39">
+<div class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>concentric_circles(<span class="dv">50</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="39">
+<div class="cell-output cell-output-display" data-execution_count="28">
 <p><img src="hw05_files/figure-html/cell-15-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-execution_count="40">
+<div class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> concentric_circles(radius, n):</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    delta <span class="op">=</span> radius<span class="op">/</span>n</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    circles <span class="op">=</span> [circle(r<span class="op">=</span>i<span class="op">*</span>delta) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>)]</span>
@@ -434,27 +434,27 @@ figcaption code {
 <span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    design <span class="op">=</span> [bcircle(r<span class="op">=</span>i<span class="op">*</span>shift) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>)]</span>
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> combine(design)<span class="op">|</span>translate(y<span class="op">=-</span>r)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="41">
+<div class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>conbottomic_circles(<span class="dv">100</span>, <span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="41">
+<div class="cell-output cell-output-display" data-execution_count="32">
 <p><img src="hw05_files/figure-html/cell-17-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-execution_count="42">
+<div class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>conbottomic_circles(<span class="dv">50</span>,<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="42">
+<div class="cell-output cell-output-display" data-execution_count="17">
 <p><img src="hw05_files/figure-html/cell-18-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-execution_count="43">
+<div class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bcircle(bx<span class="op">=</span><span class="dv">0</span>, by<span class="op">=</span><span class="dv">0</span>, r<span class="op">=</span><span class="dv">50</span>):</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    cx <span class="op">=</span> bx</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    cy <span class="op">=</span> by<span class="op">+</span>r</span>
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> circle(x<span class="op">=</span>cx, y<span class="op">=</span>cy, r<span class="op">=</span>r)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="44">
+<div class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>bcircle(r<span class="op">=</span><span class="dv">25</span>)<span class="op">+</span>bcircle(r<span class="op">=</span><span class="dv">50</span>)<span class="op">+</span>bcircle(r<span class="op">=</span><span class="dv">75</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="44">
+<div class="cell-output cell-output-display" data-execution_count="19">
 <p><img src="hw05_files/figure-html/cell-20-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -463,14 +463,14 @@ figcaption code {
 <h2 data-number="5.5" class="anchored" data-anchor-id="problem-5-touching-circles"><span class="header-section-number">5.5</span> Problem 5: Touching Circles</h2>
 <p>Draw 5 circles with radius <span class="math inline">\(r\)</span>, <span class="math inline">\(2r\)</span>, <span class="math inline">\(3r\)</span>, <span class="math inline">\(4r\)</span> and <span class="math inline">\(5r\)</span> in a row such that consequetive circles are touching each other and the combined figure takes the full width of 300 px.</p>
 <p><img src="images/hw05-touching-circles-5.svg" class="img-fluid"></p>
-<div class="cell" data-execution_count="45">
+<div class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> circle(r<span class="op">=</span><span class="dv">10</span>,x<span class="op">=-</span><span class="dv">140</span>)</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> circle(r<span class="op">=</span><span class="dv">20</span>,x<span class="op">=-</span><span class="dv">110</span>)</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> circle(r<span class="op">=</span><span class="dv">30</span>, x<span class="op">=-</span><span class="dv">60</span>)</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> circle(r<span class="op">=</span><span class="dv">40</span>,x<span class="op">=</span><span class="dv">10</span>)</span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> circle(r<span class="op">=</span><span class="dv">50</span>,x<span class="op">=</span><span class="dv">100</span>)</span>
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>a<span class="op">+</span>b<span class="op">+</span>c<span class="op">+</span>d<span class="op">+</span>e</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="45">
+<div class="cell-output cell-output-display" data-execution_count="20">
 <p><img src="hw05_files/figure-html/cell-21-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -500,7 +500,7 @@ figcaption code {
 </tr>
 
 </tbody></table>
-<div class="cell" data-execution_count="46">
+<div class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sigma(n):</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(<span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>))</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -538,13 +538,13 @@ figcaption code {
 <p>I further modified <code>lcircle</code> to make a function <code>rcircle(x, y, r)</code>. The <code>rcircle</code> function is almost identical to <code>lcircle</code>, except that <code>cx</code> in <code>rcircle</code> is equal to <code>x-r</code>, not <code>x+r</code>.</p>
 <p>I rounded off by creating the <code>left_touching_circles</code> function, with <code>n</code> as the argument. This crowning piece takes <code>x = -150</code> and <code>y = 0</code>. A special variable, r0, is used, which equals 150/sigma(n)(remember that n is the argument for left_touching_circles). The variable r equals r0.</p>
 <p>For the touching circles, I took an empty list called ‘shapes’. Then I instituted a loop for i in range(n), which produces c = lcircle(x, y, r). This is to make the circles with. Further, x = x+2*r, since the centre of each circle is separated by 2 times the radius. y = 0, because again, y doesn’t change. Since the smallest circle’s radius = r0, and since the radius of each circle after that increases upon r0, r = r+r0. Finally, each c is appended onto shapes, and combine(shapes) is returned to give you the final result.</p>
-<div class="cell" data-execution_count="55">
+<div class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>left_touching_circles(<span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="55">
+<div class="cell-output cell-output-display" data-execution_count="22">
 <p><img src="hw05_files/figure-html/cell-25-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-execution_count="48">
+<div class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> right_touching_circles(n):</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    r0 <span class="op">=</span> <span class="dv">150</span><span class="op">/</span>sigma(n)</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="dv">150</span></span>
@@ -559,9 +559,9 @@ figcaption code {
 <span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>        circles.append(c)</span>
 <span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> combine(circles)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="56">
+<div class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>right_touching_circles(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="56">
+<div class="cell-output cell-output-display" data-execution_count="24">
 <p><img src="hw05_files/figure-html/cell-27-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -569,7 +569,7 @@ figcaption code {
 <section id="bonus-function-right-touching-circles" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Bonus Function: Right Touching Circles</h1>
 <p>In this variant, the smallest circle starts form the right, hence the name. Therefore, although the function right_touching_circles is otherwise structurally identical to left_touching_circles, x = 150, and c is rcircle instead of lcircle. Furthermore, the x in c is x-2 * r rather than x+2 * r. These small, simple changes effectively flip left_touching_circles, giving an entirely new function!</p>
-<div class="cell" data-execution_count="50">
+<div class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>]</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>x.append(<span class="dv">3</span>)</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -577,15 +577,15 @@ figcaption code {
 <pre><code>[1, 2, 3]</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="51">
+<div class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>circle()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="51">
+<div class="cell-output cell-output-display" data-execution_count="26">
 <p><img src="hw05_files/figure-html/cell-29-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
-<div class="cell" data-execution_count="53">
+<div class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>sigma(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="53">
+<div class="cell-output cell-output-display" data-execution_count="27">
 <pre><code>15</code></pre>
 </div>
 </div>
