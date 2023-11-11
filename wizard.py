@@ -138,3 +138,33 @@ def donut_grid(n):
         y = y+size
         x = -150+r
     return combine(shapes)
+
+def random_squares_grid(n):
+    size = 300/n
+    r = size/2
+    x = -150+r
+    y = -150+r
+    shapes = []
+    for j in range(n):
+        for i in range(n):
+            c = random_squares(w=size, n=10)|translate(x=x, y=y)
+            shapes.append(c)
+            x = x+size
+        y = y+size
+        x = -150+r
+    return combine(shapes)
+
+def super_grid(shape_maker, n):
+    size = 300/n
+    r = size/2
+    x = -150+r
+    y = -150+r
+    shapes = []
+    for j in range(n):
+        for i in range(n):
+            c = shape_maker(size)|translate(x=x, y=y)
+            shapes.append(c)
+            x = x+size
+        y = y+size
+        x = -150+r
+    return combine(shapes)
