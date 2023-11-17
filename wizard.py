@@ -168,3 +168,7 @@ def super_grid(shape_maker, n):
         y = y+size
         x = -150+r
     return combine(shapes)
+
+def make_circles(size, row, column, n):
+    #print(f"make_circles size={size} row={row} column={column}")
+    return concentric_circles(radius = size/2, n=row+column+1)
