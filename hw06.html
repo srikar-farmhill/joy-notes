@@ -451,13 +451,13 @@ R1     0     1     2     0     1
 R0     0     1     2     0     1</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="98">
+<div class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_circles(size, row, column, n):</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">#print(f"make_circles size={size} row={row} column={column}")</span></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> concentric_circles(radius <span class="op">=</span> size<span class="op">/</span><span class="dv">2</span>, n<span class="op">=</span>(column<span class="op">%</span><span class="dv">3</span>)<span class="op">+</span><span class="dv">1</span>)</span>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>super_grid_v2(make_circles, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="98">
+<div class="cell-output cell-output-display" data-execution_count="19">
 <p><img src="hw06_files/figure-html/cell-22-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -466,7 +466,7 @@ R0     0     1     2     0     1</code></pre>
 <h2 data-number="6.4" class="anchored" data-anchor-id="problem-2"><span class="header-section-number">6.4</span> Problem 2</h2>
 <p>Make the following pattern.</p>
 <p><img src="images/hw06-supergrid-2.svg" class="img-fluid"></p>
-<div class="cell" data-execution_count="62">
+<div class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>show_table(<span class="dv">5</span>, <span class="st">"n-row+column"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      C0    C1    C2    C3    C4
@@ -478,15 +478,15 @@ R1     4     5     6     7     8
 R0     5     6     7     8     9</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="40">
+<div class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> wizard <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="63">
+<div class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_shape(size, row, column, n):</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> concentric_circles(radius<span class="op">=</span>size<span class="op">/</span><span class="dv">2</span>, n<span class="op">=</span>n<span class="op">-</span>row<span class="op">+</span>column)</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>super_grid_v2(make_shape, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="63">
+<div class="cell-output cell-output-display" data-execution_count="22">
 <p><img src="hw06_files/figure-html/cell-26-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -495,7 +495,7 @@ R0     5     6     7     8     9</code></pre>
 <h2 data-number="6.5" class="anchored" data-anchor-id="problem-3"><span class="header-section-number">6.5</span> Problem 3</h2>
 <p>Make the following pattern.</p>
 <p><img src="images/hw06-supergrid-3.svg" class="img-fluid"></p>
-<div class="cell" data-execution_count="67">
+<div class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>show_table(<span class="dv">5</span>, <span class="st">"max(n-row, column+1)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      C0    C1    C2    C3    C4
@@ -507,12 +507,12 @@ R1     4     4     4     4     5
 R0     5     5     5     5     5</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="68">
+<div class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_shape(size, row, column, n):</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> concentric_circles(radius<span class="op">=</span>size<span class="op">/</span><span class="dv">2</span>, n<span class="op">=</span><span class="bu">max</span>(n<span class="op">-</span>row, column<span class="op">+</span><span class="dv">1</span>))</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>super_grid_v2(make_shape, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="68">
+<div class="cell-output cell-output-display" data-execution_count="24">
 <p><img src="hw06_files/figure-html/cell-29-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -521,7 +521,7 @@ R0     5     5     5     5     5</code></pre>
 <h2 data-number="6.6" class="anchored" data-anchor-id="problem-4"><span class="header-section-number">6.6</span> Problem 4</h2>
 <p>Make the following pattern.</p>
 <p><img src="images/hw06-supergrid-4.svg" class="img-fluid"></p>
-<div class="cell" data-execution_count="94">
+<div class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>show_table(<span class="dv">5</span>, <span class="st">"abs(n-row-column-1)+1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      C0    C1    C2    C3    C4
@@ -533,12 +533,12 @@ R1     4     3     2     1     2
 R0     5     4     3     2     1</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="95">
+<div class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_shape(size, row, column, n):</span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> concentric_circles(radius<span class="op">=</span>size<span class="op">/</span><span class="dv">2</span>, n<span class="op">=</span><span class="bu">abs</span>(n<span class="op">-</span>row<span class="op">-</span>column<span class="op">-</span><span class="dv">1</span>)<span class="op">+</span><span class="dv">1</span>)</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>super_grid_v2(make_shape, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="95">
+<div class="cell-output cell-output-display" data-execution_count="26">
 <p><img src="hw06_files/figure-html/cell-31-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -547,7 +547,7 @@ R0     5     4     3     2     1</code></pre>
 <h2 data-number="6.7" class="anchored" data-anchor-id="problem-5"><span class="header-section-number">6.7</span> Problem 5</h2>
 <p>Make the following pattern.</p>
 <p><img src="images/hw06-supergrid-5.svg" class="img-fluid"></p>
-<div class="cell" data-execution_count="74">
+<div class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>show_table(<span class="dv">12</span>, <span class="st">"column%3+1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       C0    C1    C2    C3    C4    C5    C6    C7    C8    C9    C10    C11
@@ -566,12 +566,12 @@ R1      1     2     3     1     2     3     1     2     3     1      2      3
 R0      1     2     3     1     2     3     1     2     3     1      2      3</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="81">
+<div class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_shape(size, row, column, n):</span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> concentric_circles(radius<span class="op">=</span>size<span class="op">/</span><span class="dv">2</span>, n<span class="op">=</span>column<span class="op">%</span><span class="dv">3</span><span class="op">+</span><span class="dv">1</span>)</span>
 <span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>super_grid_v2(make_shape, <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="81">
+<div class="cell-output cell-output-display" data-execution_count="28">
 <p><img src="hw06_files/figure-html/cell-33-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
