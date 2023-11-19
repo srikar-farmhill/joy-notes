@@ -1,0 +1,31 @@
+<svg width="300" height="300" viewBox="-150 -150 300 300" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="scale(1 -1)">
+  <g>
+    <circle cx="0" cy="0" r="30.0" transform="translate(-120.0 -120.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(-60.0 -120.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(0.0 -120.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(60.0 -120.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(120.0 -120.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(-120.0 -60.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(-60.0 -60.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(0.0 -60.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(60.0 -60.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(120.0 -60.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(-120.0 0.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(-60.0 0.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(0.0 0.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(60.0 0.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(120.0 0.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(-120.0 60.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(-60.0 60.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(0.0 60.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(60.0 60.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(120.0 60.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(-120.0 120.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(-60.0 120.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(0.0 120.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(60.0 120.0)" />
+    <circle cx="0" cy="0" r="30.0" transform="translate(120.0 120.0)" />
+  </g>
+</g>
+</svg>

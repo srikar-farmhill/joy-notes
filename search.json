@@ -189,9 +189,100 @@
     "text": "5.6 Problem 6: Generic Touching Circles (Bonus Problem)\nWrite a function touching_circles that takes a number n as argument and creates a shape with n circles in a row with the consequetive circles touching each other. The radii of the circles uniformly increases from the first circle to the last.\n\n\n\n\n\n\n\ntouching_circles(5)\n\n\n\n\n\n\n\ntouching_circles(8)\n\n\n\n\n\n\n\ndef sigma(n):\n    return sum(range(1, n+1))\n\ndef lcircle(x, y, r):\n    cx = x+r\n    cy = y\n    c = circle(x=cx, y=cy, r=r)\n    return c\n\ndef rcircle(x, y, r):\n    cx = x-r\n    cy = y\n    c = circle(x=cx, y=cy, r=r)\n    return c\n\ndef left_touching_circles(n):\n    r0 = 150/sigma(n)\n    x = -150\n    y = 0\n    r = r0\n    shapes = []\n    for i in range(n):\n        c = lcircle(x, y, r)\n        x = x+2*r\n        y = 0\n        r = r+r0\n        shapes.append(c)\n    return combine(shapes)"
   },
   {
+    "objectID": "hw06.html#super-grid-v2",
+    "href": "hw06.html#super-grid-v2",
+    "title": "6  Homework 06",
+    "section": "6.1 Super Grid V2",
+    "text": "6.1 Super Grid V2\nThis homework requires the following code.\n\ndef super_grid_v2(shape_maker, n):\n    size = 300/n\n    r = size/2\n    x = -150+r\n    y = -150+r\n    shapes = []\n    for j in range(n):\n        for i in range(n):\n            c = shape_maker(size, row=j, column=i, n=n)|translate(x=x, y=y)\n            shapes.append(c)\n            x = x+size\n        y = y+size\n        x = -150+r\n    return combine(shapes)\n\nA blank shape.\n\nblank = circle(r=0, stroke=\"none\")\n\nThe concentric_circles function is updated to handle 0 and negative values for n.\n\ndef concentric_circles(radius, n):\n    if n &lt;= 0:\n        return blank\n\n    delta = radius/n\n    circles = [circle(r=i*delta) for i in range(1, n+1)]\n    return combine(circles)"
+  },
+  {
+    "objectID": "hw06.html#utilities",
+    "href": "hw06.html#utilities",
+    "title": "6  Homework 06",
+    "section": "6.2 Utilities",
+    "text": "6.2 Utilities\nHere are some utilities for you to solve this exercise.\nInstall the python package called tabulate to print tables by running the following command.\n\n!python -m pip install tabulate\n\nRequirement already satisfied: tabulate in c:\\users\\nandu\\appdata\\roaming\\jupyterlab-desktop\\jlab_server\\lib\\site-packages (0.9.0)\n\n\n\n6.2.1 Show Table\nThe following show_table function takes an experession using row, column and n and shows the value of that expression for every cell in a grid of size n.\nPlease note that you need to specify the expression as a string.\n\nfrom tabulate import tabulate\n\ndef show_table(n, expr):\n    rows = list(range(n))[::-1]\n    columns = list(range(n))\n    headers = [\"\"] + [f\"C{c}\" for c in columns]\n    data = [[f\"R{row}\"] +[eval(expr, {\"row\": row, \"column\": column, \"n\": n}) for column in columns] for row in rows]    \n    print(tabulate(data, headers=headers))\n\n\nshow_table(5, \"column\")\n\n      C0    C1    C2    C3    C4\n--  ----  ----  ----  ----  ----\nR4     0     1     2     3     4\nR3     0     1     2     3     4\nR2     0     1     2     3     4\nR1     0     1     2     3     4\nR0     0     1     2     3     4\n\n\n\nshow_table(5, \"column + 1\")\n\n      C0    C1    C2    C3    C4\n--  ----  ----  ----  ----  ----\nR4     1     2     3     4     5\nR3     1     2     3     4     5\nR2     1     2     3     4     5\nR1     1     2     3     4     5\nR0     1     2     3     4     5\n\n\nYou can explore interesting patterns with show_table, before using it with super_grid_v2.\nYou can try with interesting functions.\n\nshow_table(5, \"min(row, column)\")\n\n      C0    C1    C2    C3    C4\n--  ----  ----  ----  ----  ----\nR4     0     1     2     3     4\nR3     0     1     2     3     3\nR2     0     1     2     2     2\nR1     0     1     1     1     1\nR0     0     0     0     0     0\n\n\n\nshow_table(5, \"max(row, column)\")\n\n      C0    C1    C2    C3    C4\n--  ----  ----  ----  ----  ----\nR4     4     4     4     4     4\nR3     3     3     3     3     4\nR2     2     2     2     3     4\nR1     1     1     2     3     4\nR0     0     1     2     3     4\n\n\n\nshow_table(5, \"row-column\")\n\n      C0    C1    C2    C3    C4\n--  ----  ----  ----  ----  ----\nR4     4     3     2     1     0\nR3     3     2     1     0    -1\nR2     2     1     0    -1    -2\nR1     1     0    -1    -2    -3\nR0     0    -1    -2    -3    -4\n\n\nThe abs function computes the absolute value of a number. If we give a negative number, it converts it to a positive number.\n\nshow_table(5, \"abs(row-column)\")\n\n      C0    C1    C2    C3    C4\n--  ----  ----  ----  ----  ----\nR4     4     3     2     1     0\nR3     3     2     1     0     1\nR2     2     1     0     1     2\nR1     1     0     1     2     3\nR0     0     1     2     3     4\n\n\n\nshow_table(5, \"n-row\")\n\n      C0    C1    C2    C3    C4\n--  ----  ----  ----  ----  ----\nR4     1     1     1     1     1\nR3     2     2     2     2     2\nR2     3     3     3     3     3\nR1     4     4     4     4     4\nR0     5     5     5     5     5\n\n\nThe other interesting mathematical function is remainder. In Python, we use the % operator to compute the remainder.\n\n7 % 2\n\n1\n\n\n\n7 % 4\n\n3\n\n\nWe can use remainder to create interesting repeating patterns.\n\nshow_table(12, \"row%3\")\n\n       C0    C1    C2    C3    C4    C5    C6    C7    C8    C9    C10    C11\n---  ----  ----  ----  ----  ----  ----  ----  ----  ----  ----  -----  -----\nR11     2     2     2     2     2     2     2     2     2     2      2      2\nR10     1     1     1     1     1     1     1     1     1     1      1      1\nR9      0     0     0     0     0     0     0     0     0     0      0      0\nR8      2     2     2     2     2     2     2     2     2     2      2      2\nR7      1     1     1     1     1     1     1     1     1     1      1      1\nR6      0     0     0     0     0     0     0     0     0     0      0      0\nR5      2     2     2     2     2     2     2     2     2     2      2      2\nR4      1     1     1     1     1     1     1     1     1     1      1      1\nR3      0     0     0     0     0     0     0     0     0     0      0      0\nR2      2     2     2     2     2     2     2     2     2     2      2      2\nR1      1     1     1     1     1     1     1     1     1     1      1      1\nR0      0     0     0     0     0     0     0     0     0     0      0      0"
+  },
+  {
+    "objectID": "hw06.html#problem-1",
+    "href": "hw06.html#problem-1",
+    "title": "6  Homework 06",
+    "section": "6.3 Problem 1",
+    "text": "6.3 Problem 1\nMake the following pattern.\n\n\ndef make_circles(size, row, column, n):\n    #print(f\"make_circles size={size} row={row} column={column}\")\n    return concentric_circles(radius = size/2, n=(column%3)+1)\n\n\nshow_table(5, \"column%3\")\n\n      C0    C1    C2    C3    C4\n--  ----  ----  ----  ----  ----\nR4     0     1     2     0     1\nR3     0     1     2     0     1\nR2     0     1     2     0     1\nR1     0     1     2     0     1\nR0     0     1     2     0     1\n\n\n\ndef make_circles(size, row, column, n):\n    #print(f\"make_circles size={size} row={row} column={column}\")\n    return concentric_circles(radius = size/2, n=(column%3)+1)\n\nsuper_grid_v2(make_circles, 5)"
+  },
+  {
+    "objectID": "hw06.html#problem-2",
+    "href": "hw06.html#problem-2",
+    "title": "6  Homework 06",
+    "section": "6.4 Problem 2",
+    "text": "6.4 Problem 2\nMake the following pattern.\n\n\nshow_table(5, \"n-row+column\")\n\n      C0    C1    C2    C3    C4\n--  ----  ----  ----  ----  ----\nR4     1     2     3     4     5\nR3     2     3     4     5     6\nR2     3     4     5     6     7\nR1     4     5     6     7     8\nR0     5     6     7     8     9\n\n\n\nfrom wizard import *\n\n\ndef make_shape(size, row, column, n):\n    return concentric_circles(radius=size/2, n=n-row+column)\n\nsuper_grid_v2(make_shape, 5)"
+  },
+  {
+    "objectID": "hw06.html#problem-3",
+    "href": "hw06.html#problem-3",
+    "title": "6  Homework 06",
+    "section": "6.5 Problem 3",
+    "text": "6.5 Problem 3\nMake the following pattern.\n\n\nshow_table(5, \"max(n-row, column+1)\")\n\n      C0    C1    C2    C3    C4\n--  ----  ----  ----  ----  ----\nR4     1     2     3     4     5\nR3     2     2     3     4     5\nR2     3     3     3     4     5\nR1     4     4     4     4     5\nR0     5     5     5     5     5\n\n\n\ndef make_shape(size, row, column, n):\n    return concentric_circles(radius=size/2, n=max(n-row, column+1))\n\nsuper_grid_v2(make_shape, 5)"
+  },
+  {
+    "objectID": "hw06.html#problem-4",
+    "href": "hw06.html#problem-4",
+    "title": "6  Homework 06",
+    "section": "6.6 Problem 4",
+    "text": "6.6 Problem 4\nMake the following pattern.\n\n\nshow_table(5, \"abs(n-row-column-1)+1\")\n\n      C0    C1    C2    C3    C4\n--  ----  ----  ----  ----  ----\nR4     1     2     3     4     5\nR3     2     1     2     3     4\nR2     3     2     1     2     3\nR1     4     3     2     1     2\nR0     5     4     3     2     1\n\n\n\ndef make_shape(size, row, column, n):\n    return concentric_circles(radius=size/2, n=abs(n-row-column-1)+1)\n\nsuper_grid_v2(make_shape, 5)"
+  },
+  {
+    "objectID": "hw06.html#problem-5",
+    "href": "hw06.html#problem-5",
+    "title": "6  Homework 06",
+    "section": "6.7 Problem 5",
+    "text": "6.7 Problem 5\nMake the following pattern.\n\n\nshow_table(12, \"column%3+1\")\n\n       C0    C1    C2    C3    C4    C5    C6    C7    C8    C9    C10    C11\n---  ----  ----  ----  ----  ----  ----  ----  ----  ----  ----  -----  -----\nR11     1     2     3     1     2     3     1     2     3     1      2      3\nR10     1     2     3     1     2     3     1     2     3     1      2      3\nR9      1     2     3     1     2     3     1     2     3     1      2      3\nR8      1     2     3     1     2     3     1     2     3     1      2      3\nR7      1     2     3     1     2     3     1     2     3     1      2      3\nR6      1     2     3     1     2     3     1     2     3     1      2      3\nR5      1     2     3     1     2     3     1     2     3     1      2      3\nR4      1     2     3     1     2     3     1     2     3     1      2      3\nR3      1     2     3     1     2     3     1     2     3     1      2      3\nR2      1     2     3     1     2     3     1     2     3     1      2      3\nR1      1     2     3     1     2     3     1     2     3     1      2      3\nR0      1     2     3     1     2     3     1     2     3     1      2      3\n\n\n\ndef make_shape(size, row, column, n):\n    return concentric_circles(radius=size/2, n=column%3+1)\n\nsuper_grid_v2(make_shape, 12)"
+  },
+  {
+    "objectID": "hw07.html#utilities",
+    "href": "hw07.html#utilities",
+    "title": "7  Homework 07",
+    "section": "7.1 Utilities",
+    "text": "7.1 Utilities\nYou may need to use the following functions of this homework.\n\n7.1.1 Super Grid V2\nThe super_grid_v2 function creates a nxn grid and calls the shape_maker function to draw a shape in each cell of the grid.\nThe shape_maker function gets size - the size of the cell, row, column and n as arguments.\n\ndef super_grid_v2(shape_maker, n):\n    size = 300/n\n    r = size/2\n    x = -150+r\n    y = -150+r\n    shapes = []\n    for j in range(n):\n        for i in range(n):\n            c = shape_maker(size, row=j, column=i, n=n)|translate(x=x, y=y)\n            shapes.append(c)\n            x = x+size\n        y = y+size\n        x = -150+r\n    return combine(shapes)\n\n\ndef make_circle(size, row, column, n):\n    return circle(r=size/2)\n\n\nsuper_grid_v2(make_circle, 5)\n\n\n\n\n\n\n7.1.2 Concentric Circles\nThe concentric_circles function draws n concentric circles with outer circle taking the specified radius.\n\nblank = circle(r=0, stroke=\"none\")\n\ndef concentric_circles(radius, n):\n    if n &lt;= 0:\n        return blank\n\n    delta = radius/n\n    circles = [circle(r=i*delta) for i in range(1, n+1)]\n    return combine(circles)\n\n\nconcentric_circles(radius=100, n=3)\n\n\n\n\n\n\n7.1.3 Show Table\nThe show_table is a utility to see the values an expression over row and column as a table.\n\nfrom tabulate import tabulate\n\ndef show_table(n, expr):\n    rows = list(range(n))[::-1]\n    columns = list(range(n))\n    headers = [\"\"] + [f\"C{c}\" for c in columns]\n    data = [[f\"R{row}\"] +[eval(expr, {\"row\": row, \"column\": column, \"n\": n}) for column in columns] for row in rows]    \n    print(tabulate(data, headers=headers))\n\n\nshow_table(4, \"row + column + 1\")\n\n      C0    C1    C2    C3\n--  ----  ----  ----  ----\nR3     4     5     6     7\nR2     3     4     5     6\nR1     2     3     4     5\nR0     1     2     3     4"
+  },
+  {
+    "objectID": "hw07.html#problem-1",
+    "href": "hw07.html#problem-1",
+    "title": "7  Homework 07",
+    "section": "7.2 Problem 1",
+    "text": "7.2 Problem 1\nDraw the following shape.\n\n\n\nProblem 1"
+  },
+  {
+    "objectID": "hw07.html#problem-2",
+    "href": "hw07.html#problem-2",
+    "title": "7  Homework 07",
+    "section": "7.3 Problem 2",
+    "text": "7.3 Problem 2\nDraw the following shape.\n\n\n\nProblem 2"
+  },
+  {
+    "objectID": "hw07.html#problem-3",
+    "href": "hw07.html#problem-3",
+    "title": "7  Homework 07",
+    "section": "7.4 Problem 3",
+    "text": "7.4 Problem 3\nDraw the following shape.\n\n\n\nProblem 2"
+  },
+  {
+    "objectID": "hw07.html#problem-4",
+    "href": "hw07.html#problem-4",
+    "title": "7  Homework 07",
+    "section": "7.5 problem 4",
+    "text": "7.5 problem 4\nWrite a function circle_pattern that takes size and n as arguments and creates the following pattern. The size indicates the width and height of the picture and n indicates the number of circles draws in each part of the picture.\n\n\n\n\n\n\n\ncircle_pattern(200, 3)\n\n\n\n\n\n\n\nconcentric_circles(300, 8)"
+  },
+  {
+    "objectID": "hw07.html#problem-5",
+    "href": "hw07.html#problem-5",
+    "title": "7  Homework 07",
+    "section": "7.6 Problem 5",
+    "text": "7.6 Problem 5\nCan you draw the following shape?\n\n\n\nProblem 5\n\n\nHint: Look at the super_grid and super_grid_v2 functions that you have written before and see if you can modify them to achieve this.\n\n7.6.1 Problem 6 (Optional)\nCan you generalize the solution to Problem 5 and use it to draw the following image?\nYou want to create a function traingular_grid that takes shape_maker and n as arguments, with an approach similar to super_grid_v2.\n\n\n\nProblem 6"
+  },
+  {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "6  Summary",
+    "title": "8  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever."
   },
