@@ -472,23 +472,30 @@ R0     4     5     6     7</code></pre>
 </figure>
 </div>
 <p>Hint: Look at the <code>super_grid</code> and <code>super_grid_v2</code> functions that you have written before and see if you can modify them to achieve this.</p>
-<div class="cell" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>show_table(<span class="dv">6</span>, <span class="st">"(column+row-4)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>show_table(<span class="dv">6</span>, <span class="st">"(int(n-row&gt;column))"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      C0    C1    C2    C3    C4    C5
 --  ----  ----  ----  ----  ----  ----
-R5     1     2     3     4     5     6
-R4     0     1     2     3     4     5
-R3    -1     0     1     2     3     4
-R2    -2    -1     0     1     2     3
-R1    -3    -2    -1     0     1     2
-R0    -4    -3    -2    -1     0     1</code></pre>
+R5     1     0     0     0     0     0
+R4     1     1     0     0     0     0
+R3     1     1     1     0     0     0
+R2     1     1     1     1     0     0
+R1     1     1     1     1     1     0
+R0     1     1     1     1     1     1</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>make_circle(<span class="dv">300</span>, <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>TypeError: make_circle() missing 2 required positional arguments: 'column' and 'n'</code></pre>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_circle_2(size, row, column, n):</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n<span class="op">-</span>row<span class="op">&gt;</span>column:</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> circle(r<span class="op">=</span>size<span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> circle(r<span class="op">=</span><span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>super_grid_v2(make_circle_2, <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="35">
+<p><img src="hw07_files/figure-html/cell-26-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <section id="problem-6-optional" class="level3" data-number="7.6.1">
@@ -500,6 +507,98 @@ R0    -4    -3    -2    -1     0     1</code></pre>
 <p><img src="images/hw07-circles-in-triangle-parametric.svg" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Problem 6</figcaption>
 </figure>
+</div>
+<div class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> super_grid_v2(shape_maker, n):</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    size <span class="op">=</span> <span class="dv">300</span><span class="op">/</span>n</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> size<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="op">-</span><span class="dv">150</span><span class="op">+</span>r</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> <span class="op">-</span><span class="dv">150</span><span class="op">+</span>r</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    shapes <span class="op">=</span> []</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>            c <span class="op">=</span> shape_maker(size, row<span class="op">=</span>j, column<span class="op">=</span>i, n<span class="op">=</span>n)<span class="op">|</span>translate(x<span class="op">=</span>x, y<span class="op">=</span>y)</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>            shapes.append(c)</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> x<span class="op">+</span>size</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>        y <span class="op">=</span> y<span class="op">+</span>size</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="op">-</span><span class="dv">150</span><span class="op">+</span>r</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> combine(shapes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We have 6 rows.</p>
+<pre><code>R0-C0
+R1-C0, C1
+R2-C0, C1, C2
+R3-C0, C1, C2, C3
+R4-C0, C1, C2, C3, C4
+R5-C0, C1, C2, C3, C4, C5
+</code></pre>
+<div class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>super_grid_v2(make_circle, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0 0
+0 1
+0 2
+1 0
+1 1
+1 2
+2 0
+2 1
+2 2</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="38">
+<p><img src="hw07_files/figure-html/cell-29-output-2.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="71">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> triangle_table(n):</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> row <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"R</span><span class="sc">{</span>row<span class="sc">}</span><span class="ss">"</span>, end<span class="op">=</span><span class="st">" "</span>)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> column <span class="kw">in</span> <span class="bu">range</span>(n<span class="op">-</span>row):</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"C</span><span class="sc">{</span>column<span class="sc">}</span><span class="ss">"</span>, end<span class="op">=</span><span class="st">" "</span>)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="72">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>triangle_table(<span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>R0 C0 C1 C2 C3 C4 C5 
+R1 C0 C1 C2 C3 C4 
+R2 C0 C1 C2 C3 
+R3 C0 C1 C2 
+R4 C0 C1 
+R5 C0 </code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="81">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> triangle_grid(shape_maker, n):</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    size <span class="op">=</span> <span class="dv">300</span><span class="op">/</span>n</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> size<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="op">-</span><span class="dv">150</span><span class="op">+</span>r</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> <span class="op">-</span><span class="dv">150</span><span class="op">+</span>r</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>    shapes <span class="op">=</span> []</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> row <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> column <span class="kw">in</span> <span class="bu">range</span>(n<span class="op">-</span>row):</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>            c <span class="op">=</span> shape_maker(size, row<span class="op">=</span>n<span class="op">-</span>row<span class="op">-</span><span class="dv">1</span>, column<span class="op">=</span>column, n<span class="op">=</span>n)<span class="op">|</span>translate(x<span class="op">=</span>x, y<span class="op">=</span>y)</span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>            shapes.append(c)</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> x<span class="op">+</span>size</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>        y <span class="op">=</span> y<span class="op">+</span>size</span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="op">-</span><span class="dv">150</span><span class="op">+</span>r</span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> combine(shapes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="82">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>triangle_grid(make_circle, <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="82">
+<p><img src="hw07_files/figure-html/cell-33-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="83">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_concentric_circles(size, row, column, n):</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> concentric_circles(radius<span class="op">=</span>size<span class="op">/</span><span class="dv">2</span>, n<span class="op">=</span>row<span class="op">+</span>column<span class="op">+</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="84">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>triangle_grid(make_concentric_circles, <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="84">
+<p><img src="hw07_files/figure-html/cell-35-output-1.svg" class="img-fluid"></p>
+</div>
 </div>
 
 
