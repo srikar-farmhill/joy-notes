@@ -261,7 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="7.1.1" class="anchored" data-anchor-id="super-grid-v2"><span class="header-section-number">7.1.1</span> Super Grid V2</h3>
 <p>The <code>super_grid_v2</code> function creates a nxn grid and calls the <code>shape_maker</code> function to draw a shape in each cell of the grid.</p>
 <p>The <code>shape_maker</code> function gets <code>size</code> - the size of the cell, <code>row</code>, <code>column</code> and <code>n</code> as arguments.</p>
-<div class="cell" data-execution_count="182">
+<div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> super_grid_v2(shape_maker, n):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    size <span class="op">=</span> <span class="dv">300</span><span class="op">/</span>n</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> size<span class="op">/</span><span class="dv">2</span></span>
@@ -277,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="op">-</span><span class="dv">150</span><span class="op">+</span>r</span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> combine(shapes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="51">
+<div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_circle(size, row, column, n):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> circle(r<span class="op">=</span>size<span class="op">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -322,7 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> [[<span class="ss">f"R</span><span class="sc">{</span>row<span class="sc">}</span><span class="ss">"</span>] <span class="op">+</span>[<span class="bu">eval</span>(expr, {<span class="st">"row"</span>: row, <span class="st">"column"</span>: column, <span class="st">"n"</span>: n}) <span class="cf">for</span> column <span class="kw">in</span> columns] <span class="cf">for</span> row <span class="kw">in</span> rows]    </span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(tabulate(data, headers<span class="op">=</span>headers))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="11">
+<div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>show_table(<span class="dv">4</span>, <span class="st">"row + column + 1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      C0    C1    C2    C3
@@ -333,7 +333,7 @@ R1     2     3     4     5
 R0     1     2     3     4</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="28">
+<div class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>show_table(<span class="dv">4</span>, <span class="st">"column-row+4"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      C0    C1    C2    C3
@@ -358,14 +358,14 @@ R0     4     5     6     7</code></pre>
 <div class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> wizard <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="56">
+<div class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_ellipse_star(size, row, column, n):</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    n<span class="op">=</span>(column<span class="op">-</span>row<span class="op">+</span><span class="dv">4</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ellipse(w<span class="op">=</span>size, h<span class="op">=</span>size<span class="op">/</span><span class="dv">2</span>)<span class="op">|</span>repeat(n, rotate(<span class="dv">180</span><span class="op">/</span>n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="57">
+<div class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>super_grid_v2(make_ellipse_star, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="57">
+<div class="cell-output cell-output-display" data-execution_count="14">
 <p><img src="hw07_files/figure-html/cell-14-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -379,7 +379,7 @@ R0     4     5     6     7</code></pre>
 <figcaption class="figure-caption">Problem 2</figcaption>
 </figure>
 </div>
-<div class="cell" data-execution_count="128">
+<div class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fat_donut(x, y, r):</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> circle(x<span class="op">=</span>x, y<span class="op">=</span>y, r<span class="op">=</span>r)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> circle(x<span class="op">=</span>x, y<span class="op">=</span>y, r<span class="op">=</span>r<span class="op">/</span><span class="dv">3</span>)</span>
@@ -387,15 +387,12 @@ R0     4     5     6     7</code></pre>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> circle_bowl(size):</span>
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    size <span class="op">=</span> <span class="dv">300</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    ring <span class="op">=</span> circle(x<span class="op">=</span><span class="dv">100</span>, y<span class="op">=</span><span class="dv">0</span>, r<span class="op">=</span>size<span class="op">/</span><span class="dv">6</span>)<span class="op">|</span>repeat(<span class="dv">4</span>, rotate(<span class="dv">90</span>)</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ring</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>SyntaxError: invalid syntax (1275253077.py, line 9)</code></pre>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    ring <span class="op">=</span> circle(x<span class="op">=</span><span class="dv">100</span>, y<span class="op">=</span><span class="dv">0</span>, r<span class="op">=</span>size<span class="op">/</span><span class="dv">6</span>)<span class="op">|</span>repeat(<span class="dv">4</span>, rotate(<span class="dv">90</span>))</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ring <span class="op">+</span> fat_donut(x<span class="op">=</span><span class="dv">0</span>, y<span class="op">=</span><span class="dv">0</span>, r<span class="op">=</span>size<span class="op">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div class="cell" data-execution_count="117">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>circle_bowl(<span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="117">
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>circle_bowl(<span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
 <p><img src="hw07_files/figure-html/cell-16-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -408,6 +405,18 @@ R0     4     5     6     7</code></pre>
 <p><img src="images/hw07-six-circles.svg" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Problem 2</figcaption>
 </figure>
+</div>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> circle_bowl(size):</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    size <span class="op">=</span> <span class="dv">300</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    ring <span class="op">=</span> circle(x<span class="op">=</span><span class="dv">100</span>, y<span class="op">=</span><span class="dv">0</span>, r<span class="op">=</span>size<span class="op">/</span><span class="dv">6</span>)<span class="op">|</span>repeat(<span class="dv">6</span>, rotate(<span class="dv">60</span>))</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ring <span class="op">+</span> fat_donut(x<span class="op">=</span><span class="dv">0</span>, y<span class="op">=</span><span class="dv">0</span>, r<span class="op">=</span>size<span class="op">/</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>circle_bowl(<span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<p><img src="hw07_files/figure-html/cell-19-output-1.svg" class="img-fluid"></p>
+</div>
 </div>
 </section>
 <section id="problem-4" class="level2" data-number="7.5">
@@ -435,6 +444,23 @@ R0     4     5     6     7</code></pre>
 </tr>
 
 </tbody></table>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> conbottomic_circles(r, n):</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    shift <span class="op">=</span> r<span class="op">/</span>n</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    design <span class="op">=</span> [bcircle(r<span class="op">=</span>i<span class="op">*</span>shift) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n<span class="op">+</span><span class="dv">1</span>)]</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> combine(design)<span class="op">|</span>translate(y<span class="op">=-</span>r)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> circle_pattern(size, n):</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    centre <span class="op">=</span> concentric_circles(radius <span class="op">=</span> size<span class="op">/</span><span class="dv">6</span>, n<span class="op">=</span>n)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    layer <span class="op">=</span> conbottomic_circles(r<span class="op">=</span>size<span class="op">/</span><span class="dv">6</span>, n<span class="op">=</span>n)<span class="op">|</span>translate(y<span class="op">=</span>size<span class="op">/</span><span class="dv">3</span>)<span class="op">|</span>repeat(<span class="dv">6</span>, rotate(<span class="dv">60</span>))</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> centre<span class="op">+</span>layer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>circle_pattern(<span class="dv">200</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="26">
+<p><img src="hw07_files/figure-html/cell-22-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
 </section>
 <section id="problem-5" class="level2" data-number="7.6">
 <h2 data-number="7.6" class="anchored" data-anchor-id="problem-5"><span class="header-section-number">7.6</span> Problem 5</h2>
@@ -446,8 +472,8 @@ R0     4     5     6     7</code></pre>
 </figure>
 </div>
 <p>Hint: Look at the <code>super_grid</code> and <code>super_grid_v2</code> functions that you have written before and see if you can modify them to achieve this.</p>
-<div class="cell" data-execution_count="172">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>show_table(<span class="dv">6</span>, <span class="st">"(column+row-4)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>show_table(<span class="dv">6</span>, <span class="st">"(column+row-4)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      C0    C1    C2    C3    C4    C5
 --  ----  ----  ----  ----  ----  ----
@@ -459,10 +485,10 @@ R1    -3    -2    -1     0     1     2
 R0    -4    -3    -2    -1     0     1</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="184">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>super_grid_v2(make_circle, <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="184">
-<p><img src="hw07_files/figure-html/cell-25-output-1.svg" class="img-fluid"></p>
+<div class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>make_circle(<span class="dv">300</span>, <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>TypeError: make_circle() missing 2 required positional arguments: 'column' and 'n'</code></pre>
 </div>
 </div>
 <section id="problem-6-optional" class="level3" data-number="7.6.1">

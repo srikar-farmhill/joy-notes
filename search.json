@@ -256,28 +256,28 @@
     "href": "hw07.html#problem-2",
     "title": "7  Homework 07",
     "section": "7.3 Problem 2",
-    "text": "7.3 Problem 2\nDraw the following shape.\n\n\n\nProblem 2\n\n\n\ndef fat_donut(x, y, r):\n    a = circle(x=x, y=y, r=r)\n    b = circle(x=x, y=y, r=r/3)\n    return a+b\n\ndef circle_bowl(size):\n    size = 300\n    ring = circle(x=100, y=0, r=size/6)|repeat(4, rotate(90)\n    return ring\n\nSyntaxError: invalid syntax (1275253077.py, line 9)\n\n\n\ncircle_bowl(300)"
+    "text": "7.3 Problem 2\nDraw the following shape.\n\n\n\nProblem 2\n\n\n\ndef fat_donut(x, y, r):\n    a = circle(x=x, y=y, r=r)\n    b = circle(x=x, y=y, r=r/3)\n    return a+b\n\ndef circle_bowl(size):\n    size = 300\n    ring = circle(x=100, y=0, r=size/6)|repeat(4, rotate(90))\n    return ring + fat_donut(x=0, y=0, r=size/2)\n\n\ncircle_bowl(300)"
   },
   {
     "objectID": "hw07.html#problem-3",
     "href": "hw07.html#problem-3",
     "title": "7  Homework 07",
     "section": "7.4 Problem 3",
-    "text": "7.4 Problem 3\nDraw the following shape.\n\n\n\nProblem 2"
+    "text": "7.4 Problem 3\nDraw the following shape.\n\n\n\nProblem 2\n\n\n\ndef circle_bowl(size):\n    size = 300\n    ring = circle(x=100, y=0, r=size/6)|repeat(6, rotate(60))\n    return ring + fat_donut(x=0, y=0, r=size/2)\n\n\ncircle_bowl(300)"
   },
   {
     "objectID": "hw07.html#problem-4",
     "href": "hw07.html#problem-4",
     "title": "7  Homework 07",
     "section": "7.5 problem 4",
-    "text": "7.5 problem 4\nWrite a function circle_pattern that takes size and n as arguments and creates the following pattern. The size indicates the width and height of the picture and n indicates the number of circles draws in each part of the picture.\n\n\n\n\n\n\n\ncircle_pattern(200, 3)\n\n\n\n\n\n\n\nconcentric_circles(300, 8)"
+    "text": "7.5 problem 4\nWrite a function circle_pattern that takes size and n as arguments and creates the following pattern. The size indicates the width and height of the picture and n indicates the number of circles draws in each part of the picture.\n\n\n\n\n\n\n\ncircle_pattern(200, 3)\n\n\n\n\n\n\n\nconcentric_circles(300, 8)\n\n\n\n\n\n\n\ndef conbottomic_circles(r, n):\n    shift = r/n\n    design = [bcircle(r=i*shift) for i in range(1, n+1)]\n    return combine(design)|translate(y=-r)\n\ndef circle_pattern(size, n):\n    centre = concentric_circles(radius = size/6, n=n)\n    layer = conbottomic_circles(r=size/6, n=n)|translate(y=size/3)|repeat(6, rotate(60))\n    return centre+layer\n\n\ncircle_pattern(200, 3)"
   },
   {
     "objectID": "hw07.html#problem-5",
     "href": "hw07.html#problem-5",
     "title": "7  Homework 07",
     "section": "7.6 Problem 5",
-    "text": "7.6 Problem 5\nCan you draw the following shape?\n\n\n\nProblem 5\n\n\nHint: Look at the super_grid and super_grid_v2 functions that you have written before and see if you can modify them to achieve this.\n\nshow_table(6, \"(column+row-4)\")\n\n      C0    C1    C2    C3    C4    C5\n--  ----  ----  ----  ----  ----  ----\nR5     1     2     3     4     5     6\nR4     0     1     2     3     4     5\nR3    -1     0     1     2     3     4\nR2    -2    -1     0     1     2     3\nR1    -3    -2    -1     0     1     2\nR0    -4    -3    -2    -1     0     1\n\n\n\nsuper_grid_v2(make_circle, 6)\n\n\n\n\n\n7.6.1 Problem 6 (Optional)\nCan you generalize the solution to Problem 5 and use it to draw the following image?\nYou want to create a function traingular_grid that takes shape_maker and n as arguments, with an approach similar to super_grid_v2.\n\n\n\nProblem 6"
+    "text": "7.6 Problem 5\nCan you draw the following shape?\n\n\n\nProblem 5\n\n\nHint: Look at the super_grid and super_grid_v2 functions that you have written before and see if you can modify them to achieve this.\n\nshow_table(6, \"(column+row-4)\")\n\n      C0    C1    C2    C3    C4    C5\n--  ----  ----  ----  ----  ----  ----\nR5     1     2     3     4     5     6\nR4     0     1     2     3     4     5\nR3    -1     0     1     2     3     4\nR2    -2    -1     0     1     2     3\nR1    -3    -2    -1     0     1     2\nR0    -4    -3    -2    -1     0     1\n\n\n\nmake_circle(300, 6)\n\nTypeError: make_circle() missing 2 required positional arguments: 'column' and 'n'\n\n\n\n7.6.1 Problem 6 (Optional)\nCan you generalize the solution to Problem 5 and use it to draw the following image?\nYou want to create a function traingular_grid that takes shape_maker and n as arguments, with an approach similar to super_grid_v2.\n\n\n\nProblem 6"
   },
   {
     "objectID": "summary.html",

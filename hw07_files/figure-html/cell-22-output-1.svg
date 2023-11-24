@@ -1,0 +1,36 @@
+<svg width="300" height="300" viewBox="-150 -150 300 300" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="scale(1 -1)">
+  <g>
+    <g>
+      <circle cx="0" cy="0" r="11.111111111111112" />
+      <circle cx="0" cy="0" r="22.222222222222225" />
+      <circle cx="0" cy="0" r="33.333333333333336" />
+    </g>
+    <g>
+      <defs>
+        <g id="s-20-RIJD" transform="translate(0 66.66666666666667) translate(0 -33.333333333333336)">
+          <circle cx="0" cy="11.111111111111112" r="11.111111111111112" />
+          <circle cx="0" cy="22.222222222222225" r="22.222222222222225" />
+          <circle cx="0" cy="33.333333333333336" r="33.333333333333336" />
+        </g>
+      </defs>
+      <g>
+        <use xlink:href="#s-20-RIJD" />
+        <g transform="rotate(60)">
+          <use xlink:href="#s-20-RIJD" />
+          <g transform="rotate(60)">
+            <use xlink:href="#s-20-RIJD" />
+            <g transform="rotate(60)">
+              <use xlink:href="#s-20-RIJD" />
+              <g transform="rotate(60)">
+                <use xlink:href="#s-20-RIJD" />
+                <use xlink:href="#s-20-RIJD" transform="rotate(60)" />
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>
