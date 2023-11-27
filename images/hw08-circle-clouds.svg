@@ -1,0 +1,192 @@
+<svg width="300" height="300" viewBox="-150 -150 300 300" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="scale(1 -1)">
+  <g>
+    <g>
+      <circle cx="0" cy="0" r="75" fill="white" />
+      <g transform="translate(-75 0)">
+        <g>
+          <circle cx="0" cy="0" r="37.5" fill="white" />
+          <g transform="translate(-37.5 0)">
+            <g>
+              <circle cx="0" cy="0" r="18.75" fill="white" />
+              <g transform="translate(-18.75 0)">
+                <g>
+                  <circle cx="0" cy="0" r="9.375" fill="white" />
+                  <g transform="translate(-9.375 0)">
+                    <g>
+                      <circle cx="0" cy="0" r="4.6875" fill="white" />
+                      <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+                    </g>
+                    <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+                  </g>
+                </g>
+                <g transform="translate(9.375 0)">
+                  <g>
+                    <circle cx="0" cy="0" r="4.6875" fill="white" />
+                    <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+                  </g>
+                  <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+                </g>
+              </g>
+            </g>
+            <g transform="translate(18.75 0)">
+              <g>
+                <circle cx="0" cy="0" r="9.375" fill="white" />
+                <g transform="translate(-9.375 0)">
+                  <g>
+                    <circle cx="0" cy="0" r="4.6875" fill="white" />
+                    <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+                  </g>
+                  <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+                </g>
+              </g>
+              <g transform="translate(9.375 0)">
+                <g>
+                  <circle cx="0" cy="0" r="4.6875" fill="white" />
+                  <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+                </g>
+                <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+              </g>
+            </g>
+          </g>
+        </g>
+        <g transform="translate(37.5 0)">
+          <g>
+            <circle cx="0" cy="0" r="18.75" fill="white" />
+            <g transform="translate(-18.75 0)">
+              <g>
+                <circle cx="0" cy="0" r="9.375" fill="white" />
+                <g transform="translate(-9.375 0)">
+                  <g>
+                    <circle cx="0" cy="0" r="4.6875" fill="white" />
+                    <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+                  </g>
+                  <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+                </g>
+              </g>
+              <g transform="translate(9.375 0)">
+                <g>
+                  <circle cx="0" cy="0" r="4.6875" fill="white" />
+                  <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+                </g>
+                <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+              </g>
+            </g>
+          </g>
+          <g transform="translate(18.75 0)">
+            <g>
+              <circle cx="0" cy="0" r="9.375" fill="white" />
+              <g transform="translate(-9.375 0)">
+                <g>
+                  <circle cx="0" cy="0" r="4.6875" fill="white" />
+                  <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+                </g>
+                <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+              </g>
+            </g>
+            <g transform="translate(9.375 0)">
+              <g>
+                <circle cx="0" cy="0" r="4.6875" fill="white" />
+                <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+              </g>
+              <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(75 0)">
+      <g>
+        <circle cx="0" cy="0" r="37.5" fill="white" />
+        <g transform="translate(-37.5 0)">
+          <g>
+            <circle cx="0" cy="0" r="18.75" fill="white" />
+            <g transform="translate(-18.75 0)">
+              <g>
+                <circle cx="0" cy="0" r="9.375" fill="white" />
+                <g transform="translate(-9.375 0)">
+                  <g>
+                    <circle cx="0" cy="0" r="4.6875" fill="white" />
+                    <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+                  </g>
+                  <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+                </g>
+              </g>
+              <g transform="translate(9.375 0)">
+                <g>
+                  <circle cx="0" cy="0" r="4.6875" fill="white" />
+                  <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+                </g>
+                <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+              </g>
+            </g>
+          </g>
+          <g transform="translate(18.75 0)">
+            <g>
+              <circle cx="0" cy="0" r="9.375" fill="white" />
+              <g transform="translate(-9.375 0)">
+                <g>
+                  <circle cx="0" cy="0" r="4.6875" fill="white" />
+                  <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+                </g>
+                <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+              </g>
+            </g>
+            <g transform="translate(9.375 0)">
+              <g>
+                <circle cx="0" cy="0" r="4.6875" fill="white" />
+                <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+              </g>
+              <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+            </g>
+          </g>
+        </g>
+      </g>
+      <g transform="translate(37.5 0)">
+        <g>
+          <circle cx="0" cy="0" r="18.75" fill="white" />
+          <g transform="translate(-18.75 0)">
+            <g>
+              <circle cx="0" cy="0" r="9.375" fill="white" />
+              <g transform="translate(-9.375 0)">
+                <g>
+                  <circle cx="0" cy="0" r="4.6875" fill="white" />
+                  <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+                </g>
+                <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+              </g>
+            </g>
+            <g transform="translate(9.375 0)">
+              <g>
+                <circle cx="0" cy="0" r="4.6875" fill="white" />
+                <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+              </g>
+              <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+            </g>
+          </g>
+        </g>
+        <g transform="translate(18.75 0)">
+          <g>
+            <circle cx="0" cy="0" r="9.375" fill="white" />
+            <g transform="translate(-9.375 0)">
+              <g>
+                <circle cx="0" cy="0" r="4.6875" fill="white" />
+                <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+              </g>
+              <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+            </g>
+          </g>
+          <g transform="translate(9.375 0)">
+            <g>
+              <circle cx="0" cy="0" r="4.6875" fill="white" />
+              <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(-4.6875 0)" />
+            </g>
+            <circle cx="0" cy="0" r="2.34375" fill="white" transform="translate(4.6875 0)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>
+

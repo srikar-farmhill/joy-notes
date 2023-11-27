@@ -16,6 +16,7 @@ book:
         - hw05.ipynb
         - hw06.ipynb
         - hw07.ipynb
+        - hw08.ipynb
     - summary.qmd
     - references.qmd
 
