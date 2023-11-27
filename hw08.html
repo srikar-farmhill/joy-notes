@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The Transmutation Spellbook - 1&nbsp; Introduction</title>
+<title>The Transmutation Spellbook - 8&nbsp; Homework 08</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,8 +64,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./joy.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./summary.html" rel="next">
+<link href="./hw07.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,6 +96,8 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -93,7 +110,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hw03.html">Homework</a></li><li class="breadcrumb-item"><a href="./hw08.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Homework 08</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -126,7 +143,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -177,7 +194,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw08.html" class="sidebar-item-text sidebar-link">
+  <a href="./hw08.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Homework 08</span></span></a>
   </div>
 </li>
@@ -201,14 +218,26 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#problem-1" id="toc-problem-1" class="nav-link active" data-scroll-target="#problem-1"><span class="header-section-number">8.1</span> Problem 1</a></li>
+  <li><a href="#problem-2" id="toc-problem-2" class="nav-link" data-scroll-target="#problem-2"><span class="header-section-number">8.2</span> Problem 2</a></li>
+  <li><a href="#problem-3" id="toc-problem-3" class="nav-link" data-scroll-target="#problem-3"><span class="header-section-number">8.3</span> Problem 3</a>
+  <ul class="collapse">
+  <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4"><span class="header-section-number">8.3.1</span> Problem 4</a></li>
+  </ul></li>
+  <li><a href="#problem-5" id="toc-problem-5" class="nav-link" data-scroll-target="#problem-5"><span class="header-section-number">8.4</span> Problem 5</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Homework 08</span></h1>
 </div>
 
 
@@ -223,15 +252,81 @@ div.csl-indent {
 
 </header>
 
-<p>This is a book created from markdown and executable code.</p>
-<p>See <span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
-<div id="ref-knuth84" class="csl-entry" role="listitem">
-Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-11-27T12:25:06.722875Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-11-27T12:25:06.721959Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-11-27T12:25:06.728099Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-11-27T12:25:06.727312Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-11-27T12:25:06.722830Z&quot;}" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> joy <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="problem-1" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="problem-1"><span class="header-section-number">8.1</span> Problem 1</h2>
+<p>Write a recursive function <code>circle_clouds</code> to draw the figure shown below.</p>
+<p>The function should take two arguments <code>r</code>, the radius of the circle at the centre and <code>n</code>, the number of times to repeat the recursive process. For each turn, it draws a circle in the centre and draw a smaller version of itself with half the size on the left and right ends.</p>
+<p>Hint: Use <code>fill="white"</code> to fill the circles.</p>
+<p><img src="images/hw08-circle-clouds.svg" class="img-fluid"></p>
+<p><code>circle_clouds(r=75, n=5)</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># your code here</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="problem-2" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="problem-2"><span class="header-section-number">8.2</span> Problem 2</h2>
+<p>What happens if you modify the above <code>circle_clouds</code> function to draw three smaller shapes, seperated by <span class="math inline">\(120\degree\)</span> instead of two?</p>
+<p>Can you write a function <code>circle_clouds_3</code> to achive that?</p>
+<p>How does the figure look like when you call <code>circle_clouds_3(r=75, n=5)</code>?</p>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-11-27T12:55:06.318842Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-11-27T12:55:06.318519Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-11-27T12:55:06.323290Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-11-27T12:55:06.322055Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-11-27T12:55:06.318815Z&quot;}" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># your code here</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="problem-3" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="problem-3"><span class="header-section-number">8.3</span> Problem 3</h2>
+<p>Write a program to draw the image below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/hw08-four-circles.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Problem 3</figcaption>
+</figure>
+</div>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-11-27T12:55:12.061492Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-11-27T12:55:12.061199Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-11-27T12:55:12.065446Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-11-27T12:55:12.064813Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-11-27T12:55:12.061467Z&quot;}" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># your code here</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="problem-4" class="level3" data-number="8.3.1">
+<h3 data-number="8.3.1" class="anchored" data-anchor-id="problem-4"><span class="header-section-number">8.3.1</span> Problem 4</h3>
+<p>Consider the following program.</p>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-11-27T12:25:12.329964Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-11-27T12:25:12.329683Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-11-27T12:25:12.338362Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-11-27T12:25:12.337565Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-11-27T12:25:12.329941Z&quot;}" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>circle(x<span class="op">=</span><span class="dv">125</span>, r<span class="op">=</span><span class="dv">25</span>) <span class="op">|</span> repeat(<span class="dv">12</span>, rotate(<span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<p><img src="hw08_files/figure-html/cell-12-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
+<p>Can you implement the same without using the <code>repeat</code> transformation?</p>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-11-27T12:27:19.360463Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-11-27T12:27:19.360196Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-11-27T12:27:19.363822Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-11-27T12:27:19.363053Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-11-27T12:27:19.360441Z&quot;}" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># your code here</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="problem-5" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="problem-5"><span class="header-section-number">8.4</span> Problem 5</h2>
+<p>Consider the following program.</p>
+<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-11-27T12:26:12.437238Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-11-27T12:26:12.436954Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-11-27T12:26:12.445272Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-11-27T12:26:12.444409Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-11-27T12:26:12.437215Z&quot;}" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>circle(x<span class="op">=</span><span class="dv">100</span>, r<span class="op">=</span><span class="dv">50</span>) <span class="op">|</span> repeat(<span class="dv">100</span>, rotate(<span class="dv">10</span>) <span class="op">|</span> scale(<span class="fl">0.97</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<p><img src="hw08_files/figure-html/cell-16-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<p>Can you implement the same without using the <code>repeat</code> transformation?</p>
+<p>Hint: Try if you can write a function <code>repeat_transform(shape, n, transform)</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -469,13 +564,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./hw07.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Homework 07</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./joy.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Joy of Programming</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./summary.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
