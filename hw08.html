@@ -229,6 +229,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#problem-4" id="toc-problem-4" class="nav-link" data-scroll-target="#problem-4"><span class="header-section-number">8.3.1</span> Problem 4</a></li>
   </ul></li>
   <li><a href="#problem-5" id="toc-problem-5" class="nav-link" data-scroll-target="#problem-5"><span class="header-section-number">8.4</span> Problem 5</a></li>
+  <li><a href="#problem-6" id="toc-problem-6" class="nav-link" data-scroll-target="#problem-6"><span class="header-section-number">8.5</span> Problem 6</a></li>
   </ul>
 </nav>
     </div>
@@ -252,7 +253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-11-27T12:25:06.722875Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-11-27T12:25:06.721959Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-11-27T12:25:06.728099Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-11-27T12:25:06.727312Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-11-27T12:25:06.722830Z&quot;}" data-execution_count="2">
+<div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> joy <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="problem-1" class="level2" data-number="8.1">
@@ -262,10 +263,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Hint: Use <code>fill="white"</code> to fill the circles.</p>
 <p><img src="images/hw08-circle-clouds.svg" class="img-fluid"></p>
 <p><code>circle_clouds(r=75, n=5)</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># your code here</span></span>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>r<span class="op">=</span><span class="dv">50</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>circle(r<span class="op">=</span>r, fill<span class="op">=</span><span class="st">"white"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>b<span class="op">=</span>circle(x<span class="op">=-</span>r, r<span class="op">=</span>r<span class="op">/</span><span class="dv">2</span>, fill<span class="op">=</span><span class="st">"white"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> circle(x<span class="op">=</span>r, r<span class="op">=</span>r<span class="op">/</span><span class="dv">2</span>, fill<span class="op">=</span><span class="st">"white"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>a<span class="op">+</span>b<span class="op">+</span>c</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<p><img src="hw08_files/figure-html/cell-3-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> circle_clouds(r, n):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    a<span class="op">=</span>circle(r<span class="op">=</span>r, fill<span class="op">=</span><span class="st">"white"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n<span class="op">&gt;</span><span class="dv">1</span>:</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        b<span class="op">=</span>circle_clouds(r<span class="op">=</span>r<span class="op">/</span><span class="dv">2</span>, n<span class="op">=</span>n<span class="op">-</span><span class="dv">1</span>)<span class="op">|</span>translate(x<span class="op">=-</span>r)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        c <span class="op">=</span> circle_clouds(r<span class="op">=</span>r<span class="op">/</span><span class="dv">2</span>, n<span class="op">=</span>n<span class="op">-</span><span class="dv">1</span>)<span class="op">|</span>translate(x<span class="op">=</span>r)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> a<span class="op">+</span>b<span class="op">+</span>c</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>circle_clouds(<span class="dv">75</span>, <span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<p><img src="hw08_files/figure-html/cell-5-output-1.svg" class="img-fluid"></p>
+</div>
 </div>
 </section>
 <section id="problem-2" class="level2" data-number="8.2">
@@ -273,10 +297,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>What happens if you modify the above <code>circle_clouds</code> function to draw three smaller shapes, seperated by <span class="math inline">\(120\degree\)</span> instead of two?</p>
 <p>Can you write a function <code>circle_clouds_3</code> to achive that?</p>
 <p>How does the figure look like when you call <code>circle_clouds_3(r=75, n=5)</code>?</p>
-<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-11-27T12:55:06.318842Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-11-27T12:55:06.318519Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-11-27T12:55:06.323290Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-11-27T12:55:06.322055Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-11-27T12:55:06.318815Z&quot;}" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># your code here</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> circle_clouds_3(r, n, k<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    a<span class="op">=</span>circle(r<span class="op">=</span>r, fill<span class="op">=</span>color(<span class="dv">255</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span><span class="op">/</span>k), stroke<span class="op">=</span><span class="st">"none"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n<span class="op">&gt;</span><span class="dv">1</span>:</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        b<span class="op">=</span>circle_clouds_3(r<span class="op">=</span>r<span class="op">/</span><span class="dv">2</span>, n<span class="op">=</span>n<span class="op">-</span><span class="dv">1</span>)<span class="op">|</span>translate(x<span class="op">=-</span>r)<span class="op">|</span>repeat(k, rotate(<span class="dv">360</span><span class="op">/</span>k))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> a<span class="op">+</span>b</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>circle_clouds_3(<span class="dv">75</span>, <span class="dv">8</span>, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="24">
+<p><img src="hw08_files/figure-html/cell-7-output-1.svg" class="img-fluid"></p>
+</div>
 </div>
 </section>
 <section id="problem-3" class="level2" data-number="8.3">
@@ -289,41 +323,122 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-11-27T12:55:12.061492Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-11-27T12:55:12.061199Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-11-27T12:55:12.065446Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-11-27T12:55:12.064813Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-11-27T12:55:12.061467Z&quot;}" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># your code here</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># your code here</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <section id="problem-4" class="level3" data-number="8.3.1">
 <h3 data-number="8.3.1" class="anchored" data-anchor-id="problem-4"><span class="header-section-number">8.3.1</span> Problem 4</h3>
 <p>Consider the following program.</p>
-<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-11-27T12:25:12.329964Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-11-27T12:25:12.329683Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-11-27T12:25:12.338362Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-11-27T12:25:12.337565Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-11-27T12:25:12.329941Z&quot;}" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>circle(x<span class="op">=</span><span class="dv">125</span>, r<span class="op">=</span><span class="dv">25</span>) <span class="op">|</span> repeat(<span class="dv">12</span>, rotate(<span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>circle(x<span class="op">=</span><span class="dv">125</span>, r<span class="op">=</span><span class="dv">25</span>) <span class="op">|</span> repeat(<span class="dv">3</span>, rotate(<span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="34">
 <p><img src="hw08_files/figure-html/cell-12-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
+<div class="cell" data-execution_count="43">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>c<span class="op">=</span>circle(x<span class="op">=</span><span class="dv">125</span>, r<span class="op">=</span><span class="dv">25</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>c1<span class="op">=</span>c</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>c2<span class="op">=</span>c<span class="op">+</span>(c1<span class="op">|</span>rotate(<span class="dv">30</span>))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>c2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="43">
+<p><img src="hw08_files/figure-html/cell-13-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="41">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>c3<span class="op">=</span>c<span class="op">+</span>(c2<span class="op">|</span>rotate(<span class="dv">30</span>))</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>c3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="41">
+<p><img src="hw08_files/figure-html/cell-14-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="42">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>c4<span class="op">=</span>c<span class="op">+</span>(c3<span class="op">|</span>rotate(<span class="dv">30</span>))</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>c4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="42">
+<p><img src="hw08_files/figure-html/cell-15-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
 <p>Can you implement the same without using the <code>repeat</code> transformation?</p>
-<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-11-27T12:27:19.360463Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-11-27T12:27:19.360196Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-11-27T12:27:19.363822Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-11-27T12:27:19.363053Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-11-27T12:27:19.360441Z&quot;}" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># your code here</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="44">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recursive_circles(x, r, n, angle):</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> circle(x<span class="op">=</span>x, r<span class="op">=</span>r)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n<span class="op">==</span><span class="dv">1</span>:</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> c</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">#cn=c+(cn-1|rotate(angle))</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>        cn_1 <span class="op">=</span> recursive_circles(x<span class="op">=</span>x, r<span class="op">=</span>r, n<span class="op">=</span>n<span class="op">-</span><span class="dv">1</span>, angle<span class="op">=</span>angle)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> c<span class="op">+</span>(cn_1<span class="op">|</span>rotate(angle))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="46">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>recursive_circles(x<span class="op">=</span><span class="dv">100</span>, r<span class="op">=</span><span class="dv">25</span>, n<span class="op">=</span><span class="dv">9</span>, angle<span class="op">=</span><span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="46">
+<p><img src="hw08_files/figure-html/cell-17-output-1.svg" class="img-fluid"></p>
+</div>
 </div>
 </section>
 </section>
 <section id="problem-5" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="problem-5"><span class="header-section-number">8.4</span> Problem 5</h2>
 <p>Consider the following program.</p>
-<div class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2023-11-27T12:26:12.437238Z&quot;,&quot;iopub.status.busy&quot;:&quot;2023-11-27T12:26:12.436954Z&quot;,&quot;iopub.status.idle&quot;:&quot;2023-11-27T12:26:12.445272Z&quot;,&quot;shell.execute_reply&quot;:&quot;2023-11-27T12:26:12.444409Z&quot;,&quot;shell.execute_reply.started&quot;:&quot;2023-11-27T12:26:12.437215Z&quot;}" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>circle(x<span class="op">=</span><span class="dv">100</span>, r<span class="op">=</span><span class="dv">50</span>) <span class="op">|</span> repeat(<span class="dv">100</span>, rotate(<span class="dv">10</span>) <span class="op">|</span> scale(<span class="fl">0.97</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<p><img src="hw08_files/figure-html/cell-16-output-1.svg" class="img-fluid"></p>
+<div class="cell" data-execution_count="47">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>circle(x<span class="op">=</span><span class="dv">100</span>, r<span class="op">=</span><span class="dv">50</span>) <span class="op">|</span> repeat(<span class="dv">100</span>, rotate(<span class="dv">10</span>) <span class="op">|</span> scale(<span class="fl">0.97</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="47">
+<p><img src="hw08_files/figure-html/cell-19-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <p>Can you implement the same without using the <code>repeat</code> transformation?</p>
 <p>Hint: Try if you can write a function <code>repeat_transform(shape, n, transform)</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="49">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>r<span class="op">=</span>rotate(<span class="dv">30</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>rectangle()<span class="op">|</span>r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="49">
+<p><img src="hw08_files/figure-html/cell-20-output-1.svg" class="img-fluid"></p>
 </div>
+</div>
+<div class="cell" data-execution_count="50">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> repeat_transform(shape, n, transform):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> shape<span class="op">|</span>repeat(n, transform)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="51">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>repeat_transform(circle(x<span class="op">=</span><span class="dv">100</span>, r<span class="op">=</span><span class="dv">50</span>), <span class="dv">100</span>, rotate(<span class="dv">10</span>)<span class="op">|</span>scale(<span class="fl">0.97</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="51">
+<p><img src="hw08_files/figure-html/cell-22-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="55">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>repeat_transform(circle(x<span class="op">=</span><span class="dv">100</span>, r<span class="op">=</span><span class="dv">25</span>), <span class="dv">3</span>, rotate(<span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="55">
+<p><img src="hw08_files/figure-html/cell-23-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="57">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> repeat_transform(shape, n, transform):</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n<span class="op">==</span><span class="dv">1</span>:</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> shape</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">#rn=shape+(rn-1|transform)</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>        rn_1 <span class="op">=</span> repeat_transform(shape, n<span class="op">-</span><span class="dv">1</span>, transform)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>        rn <span class="op">=</span> shape<span class="op">+</span>(rn_1<span class="op">|</span>transform)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> rn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="61">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>repeat_transform(circle(x<span class="op">=</span><span class="dv">100</span>, r<span class="op">=</span><span class="dv">25</span>), <span class="dv">3</span>, rotate(<span class="dv">30</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="61">
+<p><img src="hw08_files/figure-html/cell-25-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="62">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>repeat_transform(circle(x<span class="op">=</span><span class="dv">100</span>, r<span class="op">=</span><span class="dv">50</span>), <span class="dv">100</span>, rotate(<span class="dv">10</span>)<span class="op">|</span>scale(<span class="fl">0.97</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="62">
+<p><img src="hw08_files/figure-html/cell-26-output-1.svg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="problem-6" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="problem-6"><span class="header-section-number">8.5</span> Problem 6</h2>
+<p><img src="https://mon.school/files/right-split.svg" class="img-fluid"></p>
+<p>As homework, do problems 3 and 6 using recursive functions.</p>
 
 
 </section>

@@ -2,17 +2,17 @@
 <g transform="scale(1 -1)">
   <g>
     <defs>
-      <line x1="-100" y1="0" x2="100" y2="0" id="s-1-y77I" />
+      <line x1="-100" y1="0" x2="100" y2="0" id="s-1-16nX" />
     </defs>
     <g>
-      <use xlink:href="#s-1-y77I" />
+      <use xlink:href="#s-1-16nX" />
       <g transform="rotate(36.0)">
-        <use xlink:href="#s-1-y77I" />
+        <use xlink:href="#s-1-16nX" />
         <g transform="rotate(36.0)">
-          <use xlink:href="#s-1-y77I" />
+          <use xlink:href="#s-1-16nX" />
           <g transform="rotate(36.0)">
-            <use xlink:href="#s-1-y77I" />
-            <use xlink:href="#s-1-y77I" transform="rotate(36.0)" />
+            <use xlink:href="#s-1-16nX" />
+            <use xlink:href="#s-1-16nX" transform="rotate(36.0)" />
           </g>
         </g>
       </g>

@@ -2,13 +2,13 @@
 <g transform="scale(1 -1)">
   <g>
     <defs>
-      <circle cx="125" cy="0" r="25" id="s-58-nt9f" />
+      <circle cx="100" cy="0" r="25" id="s-65-nt9f" />
     </defs>
     <g>
-      <use xlink:href="#s-58-nt9f" />
+      <use xlink:href="#s-65-nt9f" />
       <g transform="rotate(30)">
-        <use xlink:href="#s-58-nt9f" />
-        <use xlink:href="#s-58-nt9f" transform="rotate(30)" />
+        <use xlink:href="#s-65-nt9f" />
+        <use xlink:href="#s-65-nt9f" transform="rotate(30)" />
       </g>
     </g>
   </g>
