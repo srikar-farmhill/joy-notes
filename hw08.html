@@ -322,7 +322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption class="figure-caption">Problem 3</figcaption>
 </figure>
 </div>
-<div class="cell" data-execution_count="75">
+<div class="cell" data-execution_count="113">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fat_donut(x, y, r):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> circle(x<span class="op">=</span>x, y<span class="op">=</span>y, r<span class="op">=</span>r)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    b <span class="op">=</span> circle(x<span class="op">=</span>x, y<span class="op">=</span>y, r<span class="op">=</span>r<span class="op">/</span><span class="dv">3</span>)</span>
@@ -345,14 +345,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> circle_plate(r, n):</span>
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> circle(r<span class="op">=</span>r)</span>
 <span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n<span class="op">&gt;</span><span class="dv">1</span>:</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        b <span class="op">=</span> circle_plate(r<span class="op">=</span>r<span class="op">/</span><span class="fl">2.9</span>, n<span class="op">=</span>n<span class="op">-</span><span class="dv">1</span>)<span class="op">|</span>translate(y<span class="op">=-</span>r<span class="op">/</span><span class="fl">2.1</span>)<span class="op">|</span>repeat(<span class="dv">4</span>, rotate(<span class="dv">90</span>))</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        b <span class="op">=</span> circle_plate(r<span class="op">=</span>r<span class="op">/</span><span class="fl">2.4</span>, n<span class="op">=</span>n<span class="op">-</span><span class="dv">1</span>)<span class="op">|</span>translate(y<span class="op">=-</span>r<span class="op">/</span><span class="fl">1.7</span>)<span class="op">|</span>repeat(<span class="dv">4</span>, rotate(<span class="dv">90</span>))</span>
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> a<span class="op">+</span>b</span>
 <span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
 <span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="76">
+<div class="cell" data-execution_count="123">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>circle_plate(<span class="dv">150</span>, <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="76">
+<div class="cell-output cell-output-display" data-execution_count="123">
 <p><img src="hw08_files/figure-html/cell-10-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
@@ -389,7 +389,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Can you implement the same without using the <code>repeat</code> transformation?</p>
-<div class="cell" data-execution_count="44">
+<div class="cell" data-execution_count="111">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> recursive_circles(x, r, n, angle):</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> circle(x<span class="op">=</span>x, r<span class="op">=</span>r)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n<span class="op">==</span><span class="dv">1</span>:</span>
@@ -399,9 +399,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        cn_1 <span class="op">=</span> recursive_circles(x<span class="op">=</span>x, r<span class="op">=</span>r, n<span class="op">=</span>n<span class="op">-</span><span class="dv">1</span>, angle<span class="op">=</span>angle)</span>
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> c<span class="op">+</span>(cn_1<span class="op">|</span>rotate(angle))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="46">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>recursive_circles(x<span class="op">=</span><span class="dv">100</span>, r<span class="op">=</span><span class="dv">25</span>, n<span class="op">=</span><span class="dv">9</span>, angle<span class="op">=</span><span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="46">
+<div class="cell" data-execution_count="112">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>recursive_circles(x<span class="op">=</span><span class="dv">100</span>, r<span class="op">=</span><span class="dv">25</span>, n<span class="op">=</span><span class="dv">12</span>, angle<span class="op">=</span><span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="112">
 <p><img src="hw08_files/figure-html/cell-17-output-1.svg" class="img-fluid"></p>
 </div>
 </div>

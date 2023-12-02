@@ -16,7 +16,16 @@
                 <circle cx="100" cy="0" r="25" />
                 <g transform="rotate(30)">
                   <circle cx="100" cy="0" r="25" />
-                  <circle cx="100" cy="0" r="25" transform="rotate(30)" />
+                  <g transform="rotate(30)">
+                    <circle cx="100" cy="0" r="25" />
+                    <g transform="rotate(30)">
+                      <circle cx="100" cy="0" r="25" />
+                      <g transform="rotate(30)">
+                        <circle cx="100" cy="0" r="25" />
+                        <circle cx="100" cy="0" r="25" transform="rotate(30)" />
+                      </g>
+                    </g>
+                  </g>
                 </g>
               </g>
             </g>
