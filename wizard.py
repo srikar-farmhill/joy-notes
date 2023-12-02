@@ -172,3 +172,13 @@ def super_grid(shape_maker, n):
 def make_circles(size, row, column, n):
     #print(f"make_circles size={size} row={row} column={column}")
     return concentric_circles(radius = size/2, n=row+column+1)
+
+def fat_donut(x, y, r):
+    a = circle(x=x, y=y, r=r)
+    b = circle(x=x, y=y, r=r/3)
+    return a+b
+
+def circle_bowl(size):
+    size = 300
+    ring = circle(x=100, y=0, r=size/6)|repeat(4, rotate(90))
+    return ring + fat_donut(x=0, y=0, r=size/2)
