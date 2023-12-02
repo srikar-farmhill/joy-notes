@@ -1,0 +1,73 @@
+<svg width="300" height="300" viewBox="-150 -150 300 300" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="scale(1 -1)">
+  <g>
+    <circle cx="0" cy="0" r="150" />
+    <g>
+      <defs>
+        <g id="s-125-dkn8" transform="translate(0 -71.42857142857143)">
+          <circle cx="0" cy="0" r="51.724137931034484" />
+          <g>
+            <defs>
+              <g id="s-124-dkn8" transform="translate(0 -24.63054187192118)">
+                <circle cx="0" cy="0" r="17.835909631391203" />
+                <g>
+                  <defs>
+                    <g id="s-123-dkn8" transform="translate(0 -8.493290300662478)">
+                      <circle cx="0" cy="0" r="6.150313665996967" />
+                      <g>
+                        <defs>
+                          <circle cx="0" cy="0" r="2.1207978158610232" id="s-122-dkn8" transform="translate(0 -2.928720793331889)" />
+                        </defs>
+                        <g>
+                          <use xlink:href="#s-122-dkn8" />
+                          <g transform="rotate(90)">
+                            <use xlink:href="#s-122-dkn8" />
+                            <g transform="rotate(90)">
+                              <use xlink:href="#s-122-dkn8" />
+                              <use xlink:href="#s-122-dkn8" transform="rotate(90)" />
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </defs>
+                  <g>
+                    <use xlink:href="#s-123-dkn8" />
+                    <g transform="rotate(90)">
+                      <use xlink:href="#s-123-dkn8" />
+                      <g transform="rotate(90)">
+                        <use xlink:href="#s-123-dkn8" />
+                        <use xlink:href="#s-123-dkn8" transform="rotate(90)" />
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </defs>
+            <g>
+              <use xlink:href="#s-124-dkn8" />
+              <g transform="rotate(90)">
+                <use xlink:href="#s-124-dkn8" />
+                <g transform="rotate(90)">
+                  <use xlink:href="#s-124-dkn8" />
+                  <use xlink:href="#s-124-dkn8" transform="rotate(90)" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </defs>
+      <g>
+        <use xlink:href="#s-125-dkn8" />
+        <g transform="rotate(90)">
+          <use xlink:href="#s-125-dkn8" />
+          <g transform="rotate(90)">
+            <use xlink:href="#s-125-dkn8" />
+            <use xlink:href="#s-125-dkn8" transform="rotate(90)" />
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>
